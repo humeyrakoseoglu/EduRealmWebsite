@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="Education, University, Student, Teacher " >
+    <meta name="description" content="This is a awsome website"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="icon" type="image/png" sizes="64x64" href="image/global-education.png">
+    <link rel="stylesheet" href="course-content.css">
+    <title>Course Content</title>
+    <script src="https://kit.fontawesome.com/a81368914c.js"></script>
+    <link rel="stylesheet" href="../css/course-content.css">
+    <script src="../scripts/course-content.js"></script>
+    <title>User Interface Design</title>
+
+
+    <style>
+
+
+      
+     #a:hover
+{
+   margin-top:1em ;
+    background:  #20c49f;
+}
+#a  {
+    margin-top:1em ;
+    background:   #20c49f;
+    padding: 8px 8px 8px 8px;
+    color:#ffffff;
+    font-size: 18px;
+    text-align: center;
+    font-style: normal;
+    border: 1px solid   #20c49f;
+    border-radius: .2em;
+    width: 70px;
+    float: right;
+
+}
+    </style>
+</head>
+<body>
+
+ <!-- navbar-->
+ <nav>
+  <div class="menu-icon">
+     <span class="fas fa-bars"></span>
+  </div>
+  <div class="logo" style="display: flex; flex-direction: row; align-items: center;">
+     <img src="../images/global-education.png" style="width: 8%;">&nbsp; EduRealm
+  </div>
+  <div class="search-icon">
+     <span class="fas fa-search"></span>
+  </div>
+  <div class="cancel-icon">
+     <span class="fas fa-times"></span>
+  </div>
+  <form action="#">
+     <input type="search" class="search-data" placeholder="Search"  ><i class="fas fa-search fa-lg" style="align-self: center; color: rgb(214, 214, 214); padding-right: 10px ;"></i>
+  </form>
+  <div class="nav-items">
+     <li><a href="teacher-profile.html"><i class="fas fa-home"></i> Home</a></li>
+     <li><a href="discover.html"><i class="fas fa-shapes"></i> Discover</a></li>
+     <li><a href="help.html"><i class="fas fa-question"></i> Help</a></li>
+     <li>
+        <a href="#">
+     <li><a></a> </li>
+     <li class="drop-li" >
+        <a href="a"><i class="fas fa-user-circle fa-3x"></i></a>
+        <ul>
+           <li><a href="settings.html" ><i class="fas fa-cog"></i> Settings</a></li>
+           <li><a href="../index.html"><i class="fas fa-sign-out-alt"></i> Log out</a></li>
+        </ul>
+     </li>
+  </div>
+  </a></li>
+  </div>
+</nav>
+<!--navbar-->
+
+    <div class="course-content">
+        <div id="content">
+            <nav id="nav">
+            
+              <a href="#first"><i class="fas fa-video"></i></a>
+              <a href="#second"><i class="fas fa-scroll"></i></a>
+              <a href="#third"><i class="fas fa-running  fa-lg"></i></a>
+              <a href="#fourth"><i class="fas fa-stopwatch"></i></a>
+      
+            </nav>
+            <main>
+              <!-- video -->
+              <div id="first" class="page" >
+
+                <div class="progress-and-title">
+                  <p style="font-size: large;">Lecture 1: Video</p>
+          
+                  <div class="bar-and-text"> 
+                    <div >
+                      <p class="bar-text" >Chapter</p>
+                      <p class="bar-text" >Progress:</p>
+                    </div>
+                    <div class="progress">
+                      <div class="w3-light-grey">
+                        <div class="w3-green" style="height:24px;width:25%">25%</div>
+                      </div>
+                    </div>
+                </div>
+              </div>
+              <iframe width="100%"  height="95%" src="https://www.youtube.com/embed/-SHXUwpVgXU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+
+            <!-- Document -->
+            <div id="second" class="page">
+                
+              <div class="progress-and-title">
+                <p style="font-size: large;">Lecture 1: Document</p>
+            
+                <div class="bar-and-text"> 
+                  <div >
+                    <p class="bar-text" >Chapter</p>
+                    <p class="bar-text" >Progress:</p>
+                  </div>
+                  <div class="progress">
+                    <div class="w3-light-grey">
+                      <div class="w3-green" style="height:24px;width:50%">50%</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <embed src="https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-831-user-interface-design-and-implementation-spring-2011/lecture-notes/MIT6_831S11_lec01.pdf" width="100%" height="95%" type="application/pdf">
+            </div>
+
+              
+             <!-- Exercise -->
+              <div id="third" class="page">
+                <div class="progress-and-title">
+                  <p style="font-size: large;">Lecture 1: Exercise</p>
+              
+                  <div class="bar-and-text"> 
+                    <div >
+                      <p class="bar-text" >Chapter</p>
+                      <p class="bar-text" >Progress:</p>
+                    </div>
+                    <div class="progress">
+                      <div class="w3-light-grey">
+                        <div class="w3-green" style="height:24px;width:75%">75%</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                 <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSelZ743ZabNMBb8VADwULOhXB9Ai_sdQSkw8B7k0EY4SWUfCA/viewform?embedded=true" width="100%" height="94%" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+              </div>
+
+              <!-- Quiz-->
+              <div id="fourth" class="page">
+
+                <div class="progress-and-title">
+                  <p style="font-size: large;">Lecture 1: Quiz</p>
+              
+                  <div class="bar-and-text"> 
+                    <div >
+                      <p class="bar-text" >Chapter</p>
+                      <p class="bar-text" >Progress:</p>
+                    </div>
+                    <div class="progress">
+                      <div class="w3-light-grey">
+                        <div class="w3-green" style="height:24px;width:100%">100%</div>
+                      </div>
+                    </div>
+                    
+                  </div>
+                </div>
+                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSe9w3NMntv2wrwUPH4RgfekQQpMlxd47yXLSHcEvuOwNNEudg/viewform?embedded=true" width="100%" height="94%" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe></div>
+            
+              <div id="page1" class="page default">
+                <br>
+                <h1 style="color: green;"><b> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; 
+                  &nbsp; &nbsp; &nbsp; &nbsp;Principles of User Interface Design	</h1>
+                <h4> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                   &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp;
+                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                    Welcome to the CSE 281 </b></h4>
+              
+                <img src = "../images/user-interface.png" style="width: 60%; display: block;
+                margin-left: auto;
+                margin-right: auto; ">
+              </div>
+            </main>
+          </div>
+
+          <h5 style="text-align: right; margin-bottom: 0%;">Chapter &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </h5>
+          <a href="course-content.html" id="a" type="submit" style="  text-decoration: none; margin-left: 1%;"> <i class="fas fa-arrow-right"></i></a>
+          <a href="course-content.html" id="a" type="submit" style="  text-decoration: none;"> <i class="fas fa-arrow-left"></i></a>
+
+    </div>
+
+    <script src="course-content.js"></script>
+</body>
+</html>

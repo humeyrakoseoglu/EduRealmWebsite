@@ -1,0 +1,706 @@
+
+      
+   <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a81368914c.js"></script>
+    <title>Comments</title>
+    <style>
+
+body{
+    
+    background:#ebeef0;
+}
+
+.img-sm {
+    width: 46px;
+    height: 46px;
+}
+
+.panel {
+    box-shadow: 0 2px 0 rgba(0,0,0,0.075);
+    border-radius: 0;
+    border: 0;
+    margin-bottom: 15px;
+}
+
+.panel .panel-footer, .panel>:last-child {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.panel .panel-heading, .panel>:first-child {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+
+.panel-body {
+    padding: 25px 20px;
+}
+
+
+.media-block .media-left {
+    display: block;
+    float: left
+}
+
+.media-block .media-right {
+    float: right
+}
+
+.media-block .media-body {
+    display: block;
+    overflow: hidden;
+    width: auto
+}
+
+.middle .media-left,
+.middle .media-right,
+.middle .media-body {
+    vertical-align: middle
+}
+
+.thumbnail {
+    border-radius: 0;
+    border-color: #e9e9e9
+}
+
+.tag.tag-sm, .btn-group-sm>.tag {
+    padding: 5px 10px;
+}
+
+.tag:not(.label) {
+    background-color: #fff;
+    padding: 6px 12px;
+    border-radius: 2px;
+    border: 1px solid #cdd6e1;
+    font-size: 12px;
+    line-height: 1.42857;
+    vertical-align: middle;
+    -webkit-transition: all .15s;
+    transition: all .15s;
+}
+.text-muted, a.text-muted:hover, a.text-muted:focus {
+    color: #acacac;
+}
+.text-sm {
+    font-size: 0.9em;
+}
+.text-5x, .text-4x, .text-5x, .text-2x, .text-lg, .text-sm, .text-xs {
+    line-height: 1.25;
+}
+
+.btn-trans {
+    background-color: transparent;
+    border-color: transparent;
+    color: #929292;
+}
+
+.btn-icon {
+    padding-left: 9px;
+    padding-right: 9px;
+}
+
+.btn-sm, .btn-group-sm>.btn, .btn-icon.btn-sm {
+    padding: 5px 10px !important;
+}
+
+.mar-top {
+    margin-top: 15px;
+}
+    </style>
+    
+
+
+
+
+
+    
+
+
+<!--NAVBAR-->
+
+
+<style>
+
+  nav{
+    background: #171c24;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    height: 80px;
+    padding: 0 50px;
+  }
+  nav .logo{
+    color: #fff;
+    font-size: 30px;
+    font-weight: 600;
+    letter-spacing: -1px;
+  }
+  nav .nav-items{
+    display: flex;
+   
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    flex: 1;
+    padding: 0 0 0 40px;
+  }
+  nav .nav-items li{
+    list-style: none;
+    padding: 0 15px;
+  }
+  nav .nav-items li a{
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    text-decoration: none;
+  }
+  nav .nav-items li a:hover{
+    color: #ff3d00;
+  }
+  nav form{
+    display: flex;
+    height: 40px;
+    padding: 2px;
+    background: #1e232b;
+    min-width: 18%!important;
+    border-radius: 2px;
+    border: 1px solid rgba(155,155,155,0.2);
+  }
+  nav form .search-data{
+    width: 100%;
+    height: 100%;
+    padding: 0 10px;
+    color: #fff;
+    font-size: 18px;
+    border: none;
+    font-weight: 500;
+    background: none;
+  }
+  nav form button{
+    padding: 0 15px;
+    color: #fff;
+    font-size: 17px;
+    background: #ff3d00;
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+  }
+  nav form button:hover{
+    background: #e63600;
+  }
+  nav .menu-icon,
+  nav .cancel-icon,
+  nav .search-icon{
+    width: 40px;
+    text-align: center;
+    margin: 0 50px;
+    font-size: 20px;
+    color: #fff;
+    cursor: pointer;
+    display: none;
+  }
+  nav .menu-icon span,
+  nav .cancel-icon,
+  nav .search-icon{
+    display: none;
+  }
+  @media (max-width: 1245px) {
+    nav{
+      padding: 0 50px;
+    }
+  }
+  @media (max-width: 1140px){
+    nav{
+      padding: 0px;
+    }
+    nav .logo{
+      flex: 2;
+      text-align: center;
+    }
+    nav .nav-items{
+      position: fixed;
+      z-index: 99;
+      top: 70px;
+      width: 100%;
+      left: -100%;
+      height: 100%;
+      padding: 10px 50px 0 50px;
+      text-align: center;
+      background: #14181f;
+      display: inline-block;
+      transition: left 0.3s ease;
+    }
+    nav .nav-items.active{
+      left: 0px;
+    }
+    nav .nav-items li{
+      line-height: 40px;
+      margin: 30px 0;
+    }
+    nav .nav-items li a{
+      font-size: 20px;
+    }
+    nav form{
+      position: absolute;
+      top: 80px;
+      right: 50px;
+      opacity: 0;
+      pointer-events: none;
+      transition: top 0.3s ease, opacity 0.1s ease;
+    }
+    nav form.active{
+      top: 95px;
+      opacity: 1;
+      pointer-events: auto;
+    }
+    nav form:before{
+      position: absolute;
+      content: "";
+      top: -13px;
+      right: 0px;
+      width: 0;
+      height: 0;
+      z-index: -1;
+      border: 10px solid transparent;
+      border-bottom-color: #1e232b;
+      margin: -20px 0 0;
+    }
+    nav form:after{
+      position: absolute;
+      content: '';
+      height: 60px;
+      padding: 2px;
+      background: #1e232b;
+      border-radius: 2px;
+      min-width: calc(100% + 20px);
+      z-index: -2;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+    nav .menu-icon{
+      display: block;
+    }
+    nav .search-icon,
+    nav .menu-icon span{
+      display: block;
+    }
+    nav .menu-icon span.hide,
+    nav .search-icon.hide{
+      display: none;
+    }
+    nav .cancel-icon.show{
+      display: block;
+    }
+  }
+  .content{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    text-align: center;
+    transform: translate(-50%, -50%);
+  }
+  .content header{
+    font-size: 30px;
+    font-weight: 700;
+  }
+  .content .text{
+    font-size: 30px;
+    font-weight: 700;
+  }
+  .space{
+    margin: 10px 0;
+  }
+  nav .logo.space{
+    color: red;
+    padding: 0 5px 0 0;
+  }
+  @media (max-width: 980px){
+    nav .menu-icon,
+    nav .cancel-icon,
+    nav .search-icon{
+      margin: 0 20px;
+    }
+    nav form{
+      right: 30px;
+    }
+  }
+  @media (max-width: 350px){
+    nav .menu-icon,
+    nav .cancel-icon,
+    nav .search-icon{
+      margin: 0 10px;
+      font-size: 16px;
+    }
+  }
+  .content{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .content header{
+    font-size: 30px;
+    font-weight: 700;
+  }
+  .content .text{
+    font-size: 30px;
+    font-weight: 700;
+  }
+  .content .space{
+    margin: 10px 0;
+  }
+  
+  
+  
+  
+  
+      </style>
+  
+  
+  
+  
+  
+  <style>
+      .dropbtn {
+        background-color: #4CAF50;
+        color: white;
+        padding: 2px;
+        font-size: 16px;
+        border: none;
+        cursor: pointer;
+      }
+      
+      .dropdown {
+        position: relative;
+        display: inline-block;
+      }
+      
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        right: 0;
+        background-color: #f9f9f9;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+      }
+      
+      .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+      }
+      
+      .dropdown-content a:hover {background-color: #f1f1f1;}
+      
+      .dropdown:hover .dropdown-content {
+        display: block;
+      }
+      
+      .dropdown:hover .dropbtn {
+        background-color: #3e8e41;
+      }
+  
+  
+  
+      .drop-li{
+     display: inline-block;
+     list-style-type: none;
+     position: relative;
+  }
+  
+  .drop-li ul {
+     display: none;
+     position: absolute;
+     width: 200px;
+     left: 0;
+     top: 100%;
+     margin: 0;
+     padding: 30x;
+  }
+  
+  .drop-li:hover > ul {
+     display: block;
+  }
+  
+  .drop-li a {
+     padding: 5px 10px;
+  
+     color: rgb(121, 77, 77);
+     text-align: center;
+     background: #000;
+     display: block;
+  }
+      </style>
+
+
+
+<!--NAVBAR-->
+
+
+
+
+
+</head>
+<body>
+   
+
+
+
+
+
+
+
+
+
+
+     
+<!-- navbar-->
+<nav>
+  <div class="menu-icon">
+     <span class="fas fa-bars"></span>
+  </div>
+  <div class="logo" style="display: flex; flex-direction: row; align-items: center; width: 30%;">
+     
+     <a href="student-profile.html" style="display: flex; flex-direction: row; align-items: center; text-decoration: none;">
+        <img src="../images/global-education.png" style="width: 12%;">
+     <div style="color: white;">
+        &nbsp; EduRealm
+     </div>
+     </a>
+     
+  </div>
+  <div class="search-icon">
+     <span class="fas fa-search"></span>
+  </div>
+  <div class="cancel-icon">
+     <span class="fas fa-times"></span>
+  </div>
+  <form action="#">
+     <input type="search" class="search-data" placeholder="Search"  ><i class="fas fa-search fa-lg" style="align-self: center; color: rgb(214, 214, 214); padding-right: 10px ;"></i>
+  </form>
+  <div class="nav-items">
+     <li><a href="student-profile.html"><i class="fas fa-home"></i> Home</a></li>
+     <li><a href="discover.html"><i class="fas fa-shapes"></i> Discover</a></li>
+     <li><a href="help.html"><i class="fas fa-question"></i> Help</a></li>
+     <li>
+        <a href="#">
+     <li><a></a> </li>
+     <li class="drop-li" >
+        <a href="#"><i class="fas fa-user-circle fa-3x"></i></a>
+        <ul>
+           <li><a href="settings.html" ><i class="fas fa-cog"></i> Settings</a></li>
+           <li><a href="../index.html"><i class="fas fa-sign-out-alt"></i> Log out</a></li>
+        </ul>
+     </li>
+  </div>
+  
+</nav>
+<!--navbar-->
+   
+
+    </div>
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+<div class="container bootdey">
+<div class="col-md-12 bootstrap snippets">
+<div class="panel">
+  <div class="panel-body">
+    <textarea class="form-control" rows="2" placeholder="What are you thinking?"></textarea>
+    <div class="mar-top clearfix">
+      <button class="btn btn-sm btn-primary pull-right" type="submit" ><i class="fa fa-pencil fa-fw"></i>Share</button>
+      <a class="btn btn-trans btn-icon fa fa-video-camera add-tooltip" href="#"></a>
+      <a class="btn btn-trans btn-icon fa fa-camera add-tooltip" href="#"></a>
+      <a class="btn btn-trans btn-icon fa fa-file add-tooltip" href="#"></a>
+    </div>
+  </div>
+</div>
+<div class="panel">
+    <div class="panel-body">
+    <!-- Newsfeed Content -->
+    <!--===================================================-->
+    <div class="media-block">
+      <a class="media-left" href="#"><img class="img-circle img-sm" alt="Profile Picture" src="https://bootdey.com/img/Content/avatar/avatar1.png"></a>
+      <div class="media-body">
+        <div class="mar-btm">
+          <a href="#" class="btn-link text-semibold media-heading box-inline">Micheal D.</a>
+          <p class="text-muted text-sm"><i class="fa fa-mobile fa-lg"></i> - From Mobile - 11 min ago</p>
+        </div>
+        <p>How can I style my HTML page?</p>
+        <div class="pad-ver">
+          <div class="btn-group">
+            <a class="btn btn-sm btn-default btn-hover-success" href="#"><i class="fa fa-thumbs-up"></i></a>
+            <a class="btn btn-sm btn-default btn-hover-danger" href="#"><i class="fa fa-thumbs-down"></i></a>
+          </div>
+          <a class="btn btn-sm btn-default btn-hover-primary" href="#">Comment</a>
+        </div>
+        <hr>
+
+        <!-- Comments -->
+        <div>
+          <div class="media-block">
+            <a class="media-left" href="#"><img class="img-circle img-sm" alt="Profile Picture" src="https://bootdey.com/img/Content/avatar/avatar2.png"></a>
+            <div class="media-body">
+              <div class="mar-btm">
+                <a href="#" class="btn-link text-semibold media-heading box-inline">Bobby Marz</a>
+                <p class="text-muted text-sm"><i class="fa fa-mobile fa-lg"></i> - From Mobile - 7 min ago</p>
+              </div>
+              <p>You can add a css code in style labels.</p>
+              <div class="pad-ver">
+                <div class="btn-group">
+                  <a class="btn btn-sm btn-default btn-hover-success active" href="#"><i class="fa fa-thumbs-up"></i> You Like it</a>
+                  <a class="btn btn-sm btn-default btn-hover-danger" href="#"><i class="fa fa-thumbs-down"></i></a>
+                </div>
+                <a class="btn btn-sm btn-default btn-hover-primary" href="#">Comment</a>
+              </div>
+              <hr>
+            </div>
+          </div>
+
+          <div class="media-block">
+            <a class="media-left" href="#"><img class="img-circle img-sm" alt="Profile Picture" src="https://bootdey.com/img/Content/avatar/avatar3.png">
+            </a>
+            <div class="media-body">
+              <div class="mar-btm">
+                <a href="#" class="btn-link text-semibold media-heading box-inline">Lucy Moon</a>
+                <p class="text-muted text-sm"><i class="fa fa-globe fa-lg"></i> - From Web - 2 min ago</p>
+              </div>
+              <p> I agree Bobby you can do it way.</p>
+              <div class="pad-ver">
+                <div class="btn-group">
+                  <a class="btn btn-sm btn-default btn-hover-success" href="#"><i class="fa fa-thumbs-up"></i></a>
+                  <a class="btn btn-sm btn-default btn-hover-danger" href="#"><i class="fa fa-thumbs-down"></i></a>
+                </div>
+                <a class="btn btn-sm btn-default btn-hover-primary" href="#">Comment</a>
+              </div>
+              <hr>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--===================================================-->
+    <!-- End Newsfeed Content -->
+
+
+    <!-- Newsfeed Content -->
+    <!--===================================================-->
+    <div class="media-block pad-all">
+      <a class="media-left" href="#"><img class="img-circle img-sm" alt="Profile Picture" src="https://bootdey.com/img/Content/avatar/avatar1.png"></a>
+      <div class="media-body">
+        <div class="mar-btm">
+          <a href="#" class="btn-link text-semibold media-heading box-inline">John Doe</a>
+          <p class="text-muted text-sm"><i class="fa fa-mobile fa-lg"></i> - From Mobile - 11 min ago</p>
+        </div>
+        <p>How to solve the problem in that code?</p>
+        <img class="img-responsive thumbnail" src="../images/javascript-code-sample.jpg" alt="Image">
+        <div class="pad-ver">
+          <span class="tag tag-sm"><i class="fa fa-heart text-danger"></i> 250 Likes</span>
+          <div class="btn-group">
+            <a class="btn btn-sm btn-default btn-hover-success" href="#"><i class="fa fa-thumbs-up"></i></a>
+            <a class="btn btn-sm btn-default btn-hover-danger" href="#"><i class="fa fa-thumbs-down"></i></a>
+          </div>
+          <a class="btn btn-sm btn-default btn-hover-primary" href="#">Comment</a>
+        </div>
+        <hr>
+
+        <!-- Comments -->
+        <div>
+          <div class="media-block pad-all">
+            <a class="media-left" href="#"><img class="img-circle img-sm" alt="Profile Picture" src="https://bootdey.com/img/Content/avatar/avatar2.png"></a>
+            <div class="media-body">
+              <div class="mar-btm">
+                <a href="#" class="btn-link text-semibold media-heading box-inline">Steve Leanz</a>
+                <p class="text-muted text-sm"><i class="fa fa-globe fa-lg"></i> - From Web - 2 min ago</p>
+              </div>
+              <p>I think you used wrong key word in the code block.</p>
+              <div>
+                <div class="btn-group">
+                  <a class="btn btn-sm btn-default btn-hover-success" href="#"><i class="fa fa-thumbs-up"></i></a>
+                  <a class="btn btn-sm btn-default btn-hover-danger" href="#"><i class="fa fa-thumbs-down"></i></a>
+                </div>
+                <a class="btn btn-sm btn-default btn-hover-primary" href="#">Comment</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--===================================================-->
+    <!-- End Newsfeed Content -->
+  </div>
+</div>
+</div>
+</div>
+
+
+
+
+<!--NAVBAR-->
+
+
+
+<script>
+  const menuBtn = document.querySelector(".menu-icon span");
+  const searchBtn = document.querySelector(".search-icon");
+  const cancelBtn = document.querySelector(".cancel-icon");
+  const items = document.querySelector(".nav-items");
+  const form = document.querySelector("form");
+  menuBtn.onclick = ()=>{
+    items.classList.add("active");
+    menuBtn.classList.add("hide");
+    searchBtn.classList.add("hide");
+    cancelBtn.classList.add("show");
+  }
+  cancelBtn.onclick = ()=>{
+    items.classList.remove("active");
+    menuBtn.classList.remove("hide");
+    searchBtn.classList.remove("hide");
+    cancelBtn.classList.remove("show");
+    form.classList.remove("active");
+    cancelBtn.style.color = "#ff3d00";
+  }
+  searchBtn.onclick = ()=>{
+    form.classList.add("active");
+    searchBtn.classList.add("hide");
+    cancelBtn.classList.add("show");
+  }
+</script>
+
+
+
+
+<!--NAVBAR-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

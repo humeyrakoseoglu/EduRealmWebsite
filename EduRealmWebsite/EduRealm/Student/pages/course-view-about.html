@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Course View</title>
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+      <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+      <link href='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css'>
+      <script src='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js'></script>
+      <link href='https://use.fontawesome.com/releases/v5.7.2/css/all.css'>
+      <script src="https://kit.fontawesome.com/a81368914c.js"></script>
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+      <link rel="stylesheet" href="createSubStyle.css">
+      <link rel="stylesheet" href="../css/course-view-about.css">
+      <script src="../scripts/course-view-about.js"></script>
+   </head>
+   <body>
+
+    <!-- navbar-->
+<nav>
+   <div class="menu-icon">
+      <span class="fas fa-bars"></span>
+   </div>
+   <div class="logo" style="display: flex; flex-direction: row; align-items: center; width: 30%;">
+      
+      <div href="student-profile.html" style="display: flex; flex-direction: row; align-items: center; text-decoration: none;">
+         <img src="../images/global-education.png" style="width: 12%;">
+      <div>
+         &nbsp; EduRealm
+      </div>
+     </div>
+   </div>
+   <div class="search-icon">
+      <span class="fas fa-search"></span>
+   </div>
+   <div class="cancel-icon">
+      <span class="fas fa-times"></span>
+   </div>
+   <form action="#">
+      <input type="search" class="search-data" placeholder="Search"  ><i class="fas fa-search fa-lg" style="align-self: center; color: rgb(214, 214, 214); padding-right: 10px ;"></i>
+   </form>
+   <div class="nav-items">
+      <li><a href="student-profile.html"><i class="fas fa-home"></i> Home</a></li>
+      <li><a href="discover.html"><i class="fas fa-shapes"></i> Discover</a></li>
+      <li><a href="help.html"><i class="fas fa-question"></i> Help</a></li>
+      <li>
+         <a href="#">
+      <li><a></a> </li>
+      <li class="drop-li" >
+         <a href="#"><i class="fas fa-user-circle fa-3x"></i></a>
+         <ul>
+            <li><a href="settings.html" ><i class="fas fa-cog"></i> Settings</a></li>
+            <li><a href="../index.html"><i class="fas fa-sign-out-alt"></i> Log out</a></li>
+         </ul>
+      </li>
+   </div>
+   
+ </nav>
+ <!--navbar-->
+      <div class="anacerceve">
+      <div class="info-course-containter">
+         <img class="course-photo" src="../images/coursee.jpg" >
+         <div class="teacher-course-info">
+            <div class="course-name">
+               <h1>User Interface</h1>
+            </div>
+            <div class="teacher-info">
+               <a href="teacher-profile.html" ><i class="fas fa-user-circle fa-5x"></i></a>
+            </div>
+            <p>Berkay Yilmaz</p>
+         </div>
+         <div class="about-course-container">
+            <h3><b>About Course</b></h3>
+            <div class="course-about-info">
+               <p>Examines human-computer interaction in the context of graphical user interfaces. The course covers human capabilities, design principles,
+                  prototyping techniques, evaluation techniques, and the implementation of graphical user interfaces. 
+                  <span id="dots">...</span><span id="more">Deliverables include short programming assignments and a semester-long group project.
+                  Students taking the graduate version also have readings from current literature and 
+                  additional assignments.</span>
+               </p>
+               <button onclick="readMore()" class="btn plus" id="myBtn" style="  font-family: 'Poppins', sans-serif;
+                  "> Read More  </i></button>
+               <div class="course-about-buttons">
+                  <fieldset class="fieldset5" style="float: right; ">
+                     
+                     <input  class="enroll-btn" type="submit" value="Enroll" onclick="enrolInfo()"/>
+                     &nbsp;&nbsp;&nbsp; 
+                     <i class="fas fa-share-alt"></i>
+                  </fieldset>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="info-accordion-together">
+      <div class="row">
+         <div class="column_2" style="width: 40%;" >
+            <fieldset class="fieldset4 abc" >
+               <label for=""><i class="fa fa-fw fa-bookmark"></i><b>&nbsp;Prerequisite:</b>Intermediate knowledge of HTML </label>
+               <label for=""><i class="fa fa-fw fa-check"></i><b>&nbsp;Completion Status:</b> Contiune</label>
+               <label for=""><i class="fa fa-fw fa-graduation-cap"></i><b>&nbsp;University:</b> Akdeniz University</label> 
+               <label for=""><i class="fa fa-fw fa-language"></i><b>&nbsp;Language:</b> English</label> 
+            </fieldset>
+            <fieldset class="fieldset4 abc">
+               <div><b><ins>Announcements </ins></b></div>
+               <br>
+               <label for=""><i class="fa fa-fw fa-comment"></i>&nbsp;</b>Chapter 5 will be updating</label>
+               <br>
+               <label for=""><i class="fa fa-fw fa-comment"></i>&nbsp;</b>Chapter 4: Quiz date 12/12/2020 10.00 am</label>  
+               <br>    
+            </fieldset>
+            <fieldset class="fieldset4 abc">
+               <div><b><ins>Auxiliary Resources</ins></b></div>
+               <br>
+               <label for=""><b>Text-Book:</b>Human Computer Interaction - Alan Dix</label>
+               <br>
+               <label for=""><b>Suggestion website:</b><a href="https://ocw.mit.edu/search/ocwsearch.htm?q=user%20interface"> https://ocw.mit.edu/search/ocwsearch.htm?q=user%20interface</a></label>      
+            </fieldset>
+         </div>
+         <div class="container-accordion">
+            <ul id="accordion" class="accordion">
+               <li>
+                  <div class="link"> <i class="fa fa-chevron-down "></i> Chapter 1 : Usability </div>
+                  <ul class="submenu">
+                     <li><a href="course-content.html"><i class="fas fa-video"></i> Subchapter 1: video Section</a></li>
+                     <li><a href="course-content.html"><i class="fas fa-scroll"></i> Subchapter 2: Script Section</a></li>
+                     <li><a href="course-content.html"><i class="fas fa-running  fa-lg"></i> Subchapter 3: Exercise Section</a></li>
+                     <li><a href="course-content.html"><i class="fas fa-stopwatch"></i> Subchapter 4: Quiz Section</a></li>
+                  </ul>
+               </li>
+               <li>
+                  <div class="link"><i class="fa fa-chevron-down"></i> Chapter 2 : User Testing </div>
+                  <ul class="submenu">
+                     <li><a href="course-content.html"><i class="fas fa-video"></i> Subchapter 1: video Section</a></li>
+                     <li><a href="course-content.html"><i class="fas fa-scroll"></i> Subchapter 2: Script Section</a></li>
+                     <li><a href="course-content.html"><i class="fas fa-running  fa-lg"></i> Subchapter 3: Exercise Section</a></li>
+                     <li><a href="course-content.html"><i class="fas fa-stopwatch"></i> Subchapter 4: Quiz Section</a></li>
+                  </ul>
+               </li>
+               <li>
+                  <div class="link"> <i class="fa fa-chevron-down "></i> Chapter 3 : Graphical Design </div>
+                  <ul class="submenu">
+                     <li><a href="#"><i class="fas fa-video"></i> Subchapter 1: Video Section</a></li>
+                     <li><a href="#"><i class="fas fa-scroll"></i> Subchapter 2: Script Section</a></li>
+                     <li><a href="#"><i class="fas fa-running  fa-lg"></i> Subchapter 3: Exercise Section</a></li>
+                     <li><a href="#"><i class="fas fa-stopwatch"></i> Subchapter 4: Quiz Section</a></li>
+                  </ul>
+               </li>
+               <li>
+                  <div class="link"><i class="fa fa-chevron-down"></i> Chapter 4 : Heuristic Evaluation  </div>
+                  <ul class="submenu">
+                     <li><a href="course-content.html"><i class="fas fa-video"></i> Subchapter 1: video Section</a></li>
+                     <li><a href="course-content.html"><i class="fas fa-scroll"></i> Subchapter 2: Script Section</a></li>
+                     <li><a href="course-content.html"><i class="fas fa-running  fa-lg"></i> Subchapter 3: Exercise Section</a></li>
+                     <li><a href="course-content.html"><i class="fas fa-stopwatch"></i> Subchapter 4: Quiz Section</a></li>
+                  </ul>
+               </li>
+               <li>
+                  <div class="link"><i class="fa fa-chevron-down"></i> Chapter 5 : Prototyping </div>
+                  <ul class="submenu">
+                     <li><a href="course-content.html"><i class="fas fa-video"></i> Subchapter 1: video Section</a></li>
+                     <li><a href="course-content.html"><i class="fas fa-scroll"></i> Subchapter 2: Script Section</a></li>
+                     <li><a href="course-content.html"><i class="fas fa-running  fa-lg"></i> Subchapter 3: Exercise Section</a></li>
+                     <li><a href="course-content.html"><i class="fas fa-stopwatch"></i> Subchapter 4: Quiz Section</a></li>
+                  </ul>
+               </li>
+               <li>
+                  <div class="link"><i class="fa fa-chevron-down"></i> Chapter 6 : Information visualization </div>
+                  <ul class="submenu">
+                     <li><a href="course-content.html"><i class="fas fa-video"></i> Subchapter 1: video Section</a></li>
+                     <li><a href="course-content.html"><i class="fas fa-scroll"></i> Subchapter 2: Script Section</a></li>
+                     <li><a href="course-content.html"><i class="fas fa-running  fa-lg"></i> Subchapter 3: Exercise Section</a></li>
+                     <li><a href="course-content.html"><i class="fas fa-stopwatch"></i> Subchapter 4: Quiz Section</a></li>
+                  </ul>
+               </li>
+               <li>
+                  <div class="link"><i class="fa fa-chevron-down"></i> Chapter 7 : Heuristic Evaluation </div>
+                  <ul class="submenu">
+                     <li><a href="course-content.html"><i class="fas fa-video"></i> Subchapter 1: video Section</a></li>
+                     <li><a href="course-content.html"><i class="fas fa-scroll"></i> Subchapter 2: Script Section</a></li>
+                     <li><a href="course-content.html"><i class="fas fa-running  fa-lg"></i> Subchapter 3: Exercise Section</a></li>
+                     <li><a href="course-content.html"><i class="fas fa-stopwatch"></i> Subchapter 4: Quiz Section</a></li>
+                  </ul>
+               </li>
+               <li>
+                  <div class="link"><i class="fa fa-chevron-down"></i> Chapter 7 : Heuristic Evaluation </div>
+                  <ul class="submenu">
+                     <li><a href="course-content.html"><i class="fas fa-video"></i> Subchapter 1: video Section</a></li>
+                     <li><a href="course-content.html"><i class="fas fa-scroll"></i> Subchapter 2: Script Section</a></li>
+                     <li><a href="course-content.html"><i class="fas fa-running  fa-lg"></i> Subchapter 3: Exercise Section</a></li>
+                     <li><a href="course-content.html"><i class="fas fa-stopwatch"></i> Subchapter 4: Quiz Section</a></li>
+                  </ul>
+               </li>
+            </ul>
+         </div>
+      </div>
+      <!--NAVBAR-->
+   </body>
+</html>

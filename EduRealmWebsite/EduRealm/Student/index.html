@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="keywords" content="Education, University, Student, Teacher " >
+      <meta name="description" content="This is a awsome website">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="icon" type="image/png" sizes="64x64" href="../images/global-education.png">
+      <title>Login</title>
+      <script src="https://kit.fontawesome.com/a81368914c.js"></script>
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+      
+      <!-- local links -->
+      <link rel="stylesheet" type="text/css" href="css/style.css">
+      
+   </head>
+   <body>
+
+      <div class="giris">
+         <img class="icon" src="images/global-education.png">
+         <h1 class="web-name">EduRealm</h1>
+      </div>
+      <div class="intro-web">
+         <img class="supported-img" src="images/undraw_world_9iqb.svg">
+      </div>
+      <div class="containterForms">
+         <form class="log-in" action="pages/student-profile.html">
+            <div class="box">
+               <img class="avatar" src="images/avatar.svg">
+               <h1>Login</h1>
+               <div class="user-info">
+                  <i class="fas fa-user"></i>
+                  <input type ="text" name="" placeholder="Email or Username" required />
+               </div>
+               <div class="user-info">
+                  <i class="fas fa-lock"></i>
+                  <input type ="password" name="" placeholder="Password" required />
+               </div>
+               <div class="container_password">
+                  <a href="#" data-target="#pwdModal" data-toggle="modal" style="text-decoration: none;">Forgot password?</a>
+               </div>
+                 <input type="submit" name="" value="LOGIN"/>
+               <p>Don't you have an account?</p>
+               <!-- Trigger/Open The Modal -->
+               <a href="#" id="myBtn" style="text-decoration: none;">Sign Up</a>
+            </div>
+        </form>
+      </div>
+
+      <!--Modal 2-->
+      <form class="box" action="index.html">
+         <!-- The Modal -->
+         <div id="myModal" class="modal2">
+            <!-- Modal content -->
+            <div class="modal-content2">
+               <span class="close">&times;</span>
+               <img class="avatar" src="images/avatar2.svg">
+               <h1>Sign Up</h1>
+               <div class="user-type">
+                  <input type="radio" id="user1"
+                     name="type-user" value="teacher">
+                  <label for="contactChoice1">Teacher</label>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  <input type="radio" id="user2"
+                     name="type-user" value="student" checked="checked">
+                  <label for="contactChoice2">Student</label>
+               </div>
+               <div class="user-sign-up">
+                  <div class="name-surname">
+                     <div class="user-info">
+                        <i class="fas fa-user"></i>
+                        <input type ="text" name="" placeholder="Name*" required/>
+                     </div>
+                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                     <div class="user-info">
+                        <i class="fas fa-user"></i>
+                        <input type ="text" name="" placeholder="Surname*" required/>
+                     </div>
+                  </div>
+                  <div class="user-info" style="max-width: 460px;">
+                     <i class="fas fa-user"></i>
+                     <input type ="text" name="" placeholder="Username*" required/>
+                  </div>
+                  <div class="user-info" style="max-width: 460px;">
+                     <i class="fas fa-envelope"></i>
+                     <input type ="text" name="" placeholder="University Email*" required/>
+                  </div>
+                  <div class="user-info" style="max-width: 460px;">
+                     <i class="fas fa-phone"></i>
+                     <input type ="phone" name="" placeholder="Phone (optional)"/>
+                  </div>
+                  <br>
+                  <div class="user-info" style="max-width: 460px;">
+                     <i class="fas fa-lock"></i>
+                     <input type ="password" name="" placeholder="Password*" required/>
+                  </div>
+                  <div class="user-info" style="max-width: 460px;">
+                     <i class="fas fa-lock"></i>
+                     <input type ="password" name="" placeholder="Confirm Password*" required/>
+                  </div>
+                  
+                  <input type="submit" value="SIGN UP" style="padding-right: 17%;"/>
+                    
+               </div>
+            </div>
+         </div>
+        </form>
+    
+
+      <!--modal-->
+      <div id="pwdModal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
+         <div class="modal-dialog">
+            <div class="modal-content">
+               <div class="modal-header">
+                  <span type="button" class="close" data-dismiss="modal" aria-hidden="true" style="float: right;">&times;</span>
+                  <h1 class="text-center">Forgot Your Password?</h1>
+               </div>
+               <div class="modal-body">
+                  <div class="col-md-12">
+                     <div class="panel panel-default">
+                        <div class="panel-body">
+                           <div class="text-center">
+                              <p>If you have forgotten your password you can reset it here.</p>
+                              <div class="panel-body">
+                                 <fieldset>
+                                    <div class="form-group">
+                                       <input class="form-control input-lg" placeholder="E-mail" name="email" type="email" required>
+                                    </div>
+                                    <input class="btn btn-lg btn-primary btn-block" value="Send Password" type="submit" style=" background-color: #20c49f; border-radius: 5px;
+                                       border-color: #36cba9;">
+                                 </fieldset>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="modal-footer">
+                  <div class="col-md-12">
+                     <button class="btn" data-dismiss="modal" aria-hidden="true"> Cancel </button>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+
+
+      <!-- jQuery first, then Tether, then Bootstrap JS. -->
+      <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+      
+      <!-- local link -->
+      <script src=".//scripts/script.js"></script>
+   </body>
+</html>

@@ -1,0 +1,1191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Chapter</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+
+
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link href='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css'>
+    <script src='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js'></script>
+    <link href='https://use.fontawesome.com/releases/v5.7.2/css/all.css'>
+
+
+
+
+    <script src="https://kit.fontawesome.com/a81368914c.js"></script>
+
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+   <link rel="stylesheet" href="createSubStyle.css">
+
+    <style>
+
+
+
+
+*{
+  margin: 0px;
+padding: 0px;
+box-sizing: border-box;
+}
+
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  outline: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+/*Title Default*/
+
+.body{
+  font-family: 'Poppins', sans-serif;
+  background-color: hsl(0, 0%, 97%);;
+
+    overflow: hidden;
+}
+
+
+#more {display: none;}
+
+
+
+/**INFO*/
+.info-course-containter{
+  background-color: rgb(205, 236, 212);
+
+  border-radius: 30px;
+
+  display: flex;
+  justify-content: space-around;
+  padding: 1%;
+  margin: 1%;
+  font-family: 'Poppins', sans-serif;
+
+}
+
+
+
+.about-course-container{
+  display: flex;
+  flex-direction: column;
+  background-color:#8badda;
+  font-size: 16px;
+  padding: 1%;
+  margin: 1%;
+  width: 60%;
+  border-radius: 10px;
+
+}
+
+.teacher-course-info{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    align-self: center;
+    flex-direction: column;
+    margin: 5px;
+  }
+
+  
+.teacher-info{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  }
+
+  .course-name{
+    display: flex;
+    justify-content: center;
+  }
+
+  .course-about-buttons{
+  display: flex;
+  justify-content: center;
+  width: 22%;
+  margin-left: 40%;
+  padding: 1%;
+}
+
+
+
+
+  .course-about-info{
+    background-color:#c5e2e6;
+    display: flex;
+    flex-direction: column;
+
+  justify-content: center;
+  border-radius: 10px;
+  padding: 1% ;
+
+  }
+
+
+  
+
+
+
+  /*MORE BUTTON */
+
+  .btn {
+  border: none;
+  background-color: inherit;
+  padding: 15px 5px;
+  padding-top: 1px ;
+  font-size: 14px;
+  cursor: pointer;
+  display: inline-block;
+
+}
+
+
+.plus {color: rgb(41, 155, 41);}
+
+.course-photo{
+  width: 23%;
+  height: 10%;
+  display: flex;
+  flex-wrap: wrap;
+flex-direction: column;
+align-self: center;
+box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+
+@media screen and (max-width: 600px){
+
+  .course-photo{
+    width: 60%;
+
+  }
+
+  .teacher-info{
+    display: none;
+  }
+
+.info-course-containter{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 3%;
+  padding-top: 5%;
+  padding-bottom: 4%;
+
+}
+
+.about-course-container{
+  display: flex;
+  flex-direction: column;
+
+  padding: 1%;
+  margin: 1%;
+  width: 90%;
+
+
+}
+
+.info-accordion-together{
+    display: flex;
+    flex-direction: column;
+    font-family: 'Poppins', sans-serif;
+
+}
+}
+    </style>
+
+
+<style>
+  /*accordion*/
+  * {
+      margin: 0;
+      padding: 0;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box
+  }
+  
+  .container-accordion {
+      width: 60%;
+      height: 55%;
+      margin-left: 40%;
+    }
+  
+  
+  
+  
+  ul {
+      list-style-type: none;
+  }
+  
+  a {
+      color: #252424;
+      text-decoration: none
+  }
+  
+  .accordion {
+      width: 100%;
+      max-width: 857px;
+      margin: 30px auto 20px;
+      background: rgb(184, 233, 195);
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      border-radius: 10px
+  }
+  
+  .accordion .link {
+      cursor: pointer;
+      display: block;
+      padding: 22px 22px 22px 42px;
+      color: #4D4D4D;
+      font-size: 19px;
+      font-weight: 700;
+      border-bottom: 1px solid #77e0ae;
+      position: relative;
+      -webkit-transition: all 0.4s ease;
+      -o-transition: all 0.4s ease;
+      transition: all 0.4s ease;
+  
+  }
+  
+  .accordion li:last-child .link {
+      border-bottom: 0;
+      
+  }
+  /*
+  .accordion li i {
+      position: absolute;
+      top: 16px;
+      right: 12px;
+      font-size: 18px;
+      color: #595959;
+      -webkit-transition: all 0.4s ease;
+      -o-transition: all 0.4s ease;
+      transition: all 0.4s ease
+  }*/
+  
+  .accordion li i.fa-chevron-down {
+      right: auto;
+      left: 18px;
+      font-size: 16px;
+  
+      -webkit-transform: rotate(-90deg);
+      -ms-transform: rotate(-90deg);
+      -o-transform: rotate(-90deg);
+      transform: rotate(-90deg);
+  
+  }
+  
+  .accordion li.open .link {
+      color: #4387e0;
+  }
+  
+  .accordion li.open i {
+      color: #4387e0;
+  }
+  
+  .accordion li.open i.fa-chevron-down {
+      -webkit-transform: rotate(0deg);
+      -ms-transform: rotate(0deg);
+      -o-transform: rotate(0deg);
+      transform: rotate(0deg);
+  }
+  
+  .submenu {
+      display: none;
+      background: #dbf6e9;
+      font-size: 16px;
+      border-bottom-right-radius: 10px;
+      border-bottom-left-radius: 10px;
+  
+  
+  }
+  
+  .submenu li {
+      border-bottom: 0px solid #dbf6e9;
+  }
+  
+  .submenu a {
+      display: block;
+      text-decoration: none;
+      color: #4387e0;
+      padding: 12px;
+      padding-left: 42px;
+      -webkit-transition: all 0.25s ease;
+      -o-transition: all 0.25s ease;
+      transition: all 0.25s ease
+  }
+  
+  .submenu a:hover {
+      background: #a1b9da;
+      color: #ffffff;
+      border-bottom-right-radius: 10px;
+      border-bottom-left-radius: 10px;
+  
+  }
+
+
+
+
+
+
+  /*Info pre*/
+
+
+
+  
+.column {
+ 
+ float: left;
+ width: 100%;
+ margin-top: 6px;
+ padding: 20px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+ content: "";
+ display: table;
+ clear: both;
+ height: 20%;
+}
+@media screen and (max-width: 1000px) {
+ .column {
+   width: 100%;
+   margin-top: 0;
+   margin-right: 0px;
+
+ }
+}
+
+.column_2 {
+
+float: left;
+width: 40%;
+margin-top: 0px;
+margin-left: 0px;
+padding: 20px;
+height: 20%;
+}
+@media screen and (max-width: 1000px) {
+ .column_2 {
+   width: 100%;
+   margin-top: 0;
+ }
+}
+.abc{
+           max-width: 1250px;
+           padding: 20px 20px;
+           background:#e8eeef;
+           margin: 5px auto;
+           border: 10px #20c49f;;
+           border-radius: 10px;
+          height: 20%;
+       }
+
+.fieldset1, .fieldset2, .fieldset5{
+          border: none;
+       }
+       .fieldset4{
+         font-size: 1.2em;
+           border-color:#9b9c9c;
+           background-color:rgb(205, 236, 212);
+       }
+       .fieldset3{
+         border-color:rgb(205, 236, 212);
+       }
+
+       .form-style-5 legend {
+         font-size: 2em;
+           margin-bottom: 10px;
+       }
+
+label {
+           display: block;
+           margin-bottom: 8px;
+       }
+
+.anacerceve{
+ background-color: #e8eeef;
+ width:90%;
+ height: 90%;
+ border-radius: 10px;
+ margin-left: 5%;
+ margin-right: 5%;
+ margin-top: 2%;
+ padding-left: 1%;
+ padding-right: 1%;
+ padding-top: 1%;
+}
+
+
+
+.info-accordion-together{
+    display: flex;
+    flex-direction: column;
+    font-family: 'Poppins', sans-serif;
+
+}
+
+
+
+
+
+
+
+        
+
+  </style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--NAVBAR-->
+
+
+<style>
+
+
+    nav{
+      background: #171c24;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      text-align: center;
+      height: 80px;
+      padding: 0 50px;
+    }
+    nav .logo{
+      color: #fff;
+      font-size: 30px;
+      font-weight: 600;
+      letter-spacing: -1px;
+    }
+    nav .nav-items{
+      display: flex;
+     
+      flex-direction: row;
+      justify-content: center;
+      text-align: center;
+      align-items: center;
+      flex: 1;
+      padding: 0 0 0 40px;
+    }
+    nav .nav-items li{
+      list-style: none;
+      padding: 0 15px;
+    }
+    nav .nav-items li a{
+      color: #fff;
+      font-size: 18px;
+      font-weight: 500;
+      text-decoration: none;
+    }
+    nav .nav-items li a:hover{
+      color: #ff3d00;
+    }
+    nav form{
+      display: flex;
+      height: 40px;
+      padding: 2px;
+      background: #1e232b;
+      min-width: 18%!important;
+      border-radius: 2px;
+      border: 1px solid rgba(155,155,155,0.2);
+    }
+    nav form .search-data{
+      width: 100%;
+      height: 100%;
+      padding: 0 10px;
+      color: #fff;
+      font-size: 18px;
+      border: none;
+      font-weight: 500;
+      background: none;
+    }
+    nav form button{
+      padding: 0 15px;
+      color: #fff;
+      font-size: 17px;
+      background: #ff3d00;
+      border: none;
+      border-radius: 2px;
+      cursor: pointer;
+    }
+    nav form button:hover{
+      background: #e63600;
+    }
+    nav .menu-icon,
+    nav .cancel-icon,
+    nav .search-icon{
+      width: 40px;
+      text-align: center;
+      margin: 0 50px;
+      font-size: 20px;
+      color: #fff;
+      cursor: pointer;
+      display: none;
+    }
+    nav .menu-icon span,
+    nav .cancel-icon,
+    nav .search-icon{
+      display: none;
+    }
+    @media (max-width: 1245px) {
+      nav{
+        padding: 0 50px;
+      }
+    }
+    @media (max-width: 1140px){
+      nav{
+        padding: 0px;
+      }
+      nav .logo{
+        flex: 2;
+        text-align: center;
+      }
+      nav .nav-items{
+        position: fixed;
+        z-index: 99;
+        top: 70px;
+        width: 100%;
+        left: -100%;
+        height: 100%;
+        padding: 10px 50px 0 50px;
+        text-align: center;
+        background: #14181f;
+        display: inline-block;
+        transition: left 0.3s ease;
+      }
+      nav .nav-items.active{
+        left: 0px;
+      }
+      nav .nav-items li{
+        line-height: 40px;
+        margin: 30px 0;
+      }
+      nav .nav-items li a{
+        font-size: 20px;
+      }
+      nav form{
+        position: absolute;
+        top: 80px;
+        right: 50px;
+        opacity: 0;
+        pointer-events: none;
+        transition: top 0.3s ease, opacity 0.1s ease;
+      }
+      nav form.active{
+        top: 95px;
+        opacity: 1;
+        pointer-events: auto;
+      }
+      nav form:before{
+        position: absolute;
+        content: "";
+        top: -13px;
+        right: 0px;
+        width: 0;
+        height: 0;
+        z-index: -1;
+        border: 10px solid transparent;
+        border-bottom-color: #1e232b;
+        margin: -20px 0 0;
+      }
+      nav form:after{
+        position: absolute;
+        content: '';
+        height: 60px;
+        padding: 2px;
+        background: #1e232b;
+        border-radius: 2px;
+        min-width: calc(100% + 20px);
+        z-index: -2;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+      }
+      nav .menu-icon{
+        display: block;
+      }
+      nav .search-icon,
+      nav .menu-icon span{
+        display: block;
+      }
+      nav .menu-icon span.hide,
+      nav .search-icon.hide{
+        display: none;
+      }
+      nav .cancel-icon.show{
+        display: block;
+      }
+    }
+    .content{
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      text-align: center;
+      transform: translate(-50%, -50%);
+    }
+    .content header{
+      font-size: 30px;
+      font-weight: 700;
+    }
+    .content .text{
+      font-size: 30px;
+      font-weight: 700;
+    }
+    .space{
+      margin: 10px 0;
+    }
+    nav .logo.space{
+      color: red;
+      padding: 0 5px 0 0;
+    }
+    @media (max-width: 980px){
+      nav .menu-icon,
+      nav .cancel-icon,
+      nav .search-icon{
+        margin: 0 20px;
+      }
+      nav form{
+        right: 30px;
+      }
+    }
+    @media (max-width: 350px){
+      nav .menu-icon,
+      nav .cancel-icon,
+      nav .search-icon{
+        margin: 0 10px;
+        font-size: 16px;
+      }
+    }
+    .content{
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    .content header{
+      font-size: 30px;
+      font-weight: 700;
+    }
+    .content .text{
+      font-size: 30px;
+      font-weight: 700;
+    }
+    .content .space{
+      margin: 10px 0;
+    }
+    
+    
+    
+    
+    
+        </style>
+    
+    
+    
+    
+    
+    <style>
+        .dropbtn {
+          background-color: #4CAF50;
+          color: white;
+          padding: 2px;
+          font-size: 16px;
+          border: none;
+          cursor: pointer;
+        }
+        
+        .dropdown {
+          position: relative;
+          display: inline-block;
+        }
+        
+        .dropdown-content {
+          display: none;
+          position: absolute;
+          right: 0;
+          background-color: #f9f9f9;
+          min-width: 160px;
+          box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+          z-index: 1;
+        }
+        
+        .dropdown-content a {
+          color: black;
+          padding: 12px 16px;
+          text-decoration: none;
+          display: block;
+        }
+        
+        .dropdown-content a:hover {background-color: #f1f1f1;}
+        
+        .dropdown:hover .dropdown-content {
+          display: block;
+        }
+        
+        .dropdown:hover .dropbtn {
+          background-color: #3e8e41;
+        }
+    
+    
+    
+        .drop-li{
+       display: inline-block;
+       list-style-type: none;
+       position: relative;
+    }
+    
+    .drop-li ul {
+       display: none;
+       position: absolute;
+       width: 200px;
+       left: 0;
+       top: 100%;
+       margin: 0;
+       padding: 30x;
+    }
+    
+    .drop-li:hover > ul {
+       display: block;
+    }
+    
+    .drop-li a {
+       padding: 5px 10px;
+    
+       color: rgb(121, 77, 77);
+       text-align: center;
+       background: #000;
+       display: block;
+    }
+    .fieldset5 {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+    }
+
+    
+
+   
+        </style>
+
+
+
+<!--NAVBAR-->
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+<body>
+    
+
+
+
+  
+
+
+
+
+
+     
+<!-- navbar-->
+<nav>
+  <div class="menu-icon">
+     <span class="fas fa-bars"></span>
+  </div>
+  <div class="logo" style="display: flex; flex-direction: row; align-items: center; width: 30%;">
+     
+     <div href="student-profile.html" style="display: flex; flex-direction: row; align-items: center; text-decoration: none;">
+        <img src="../images/global-education.png" style="width: 12%;">
+     <div>
+        &nbsp; EduRealm
+     </div>
+    </div>
+  </div>
+  <div class="search-icon">
+     <span class="fas fa-search"></span>
+  </div>
+  <div class="cancel-icon">
+     <span class="fas fa-times"></span>
+  </div>
+  <form action="#">
+     <input type="search" class="search-data" placeholder="Search"  ><i class="fas fa-search fa-lg" style="align-self: center; color: rgb(214, 214, 214); padding-right: 10px ;"></i>
+  </form>
+  <div class="nav-items">
+     <li><a href="student-profile.html"><i class="fas fa-home"></i> Home</a></li>
+     <li><a href="discover.html"><i class="fas fa-shapes"></i> Discover</a></li>
+     <li><a href="help.html"><i class="fas fa-question"></i> Help</a></li>
+     <li>
+        <a href="#">
+     <li><a></a> </li>
+     <li class="drop-li" >
+        <a href="#"><i class="fas fa-user-circle fa-3x"></i></a>
+        <ul>
+           <li><a href="settings.html" ><i class="fas fa-cog"></i> Settings</a></li>
+           <li><a href="../index.html"><i class="fas fa-sign-out-alt"></i> Log out</a></li>
+        </ul>
+     </li>
+  </div>
+</nav>
+<!--navbar-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+ <div class="anacerceve">
+
+  <div class="info-course-containter">
+    
+    <img class="course-photo" src="../images/coursee.jpg" >
+
+  
+    <div class="teacher-course-info">
+
+      <div class="course-name">
+        <h1>User Interface</h1>
+
+
+      </div>
+      <div class="teacher-info">
+        <a href="teacher-profile.html" ><i class="fas fa-user-circle fa-5x"></i></a>
+      </div>
+      <p>Berkay Yilmaz</p>
+
+    </div>
+
+    <div class="about-course-container">
+      <h3><b>About Course</b></h3>
+
+      <div class="course-about-info">
+        
+
+
+        <p>Examines human-computer interaction in the context of graphical user interfaces. The course covers human capabilities, design principles,
+           prototyping techniques, evaluation techniques, and the implementation of graphical user interfaces. 
+          <span id="dots">...</span><span id="more">Deliverables include short programming assignments and a semester-long group project.
+            Students taking the graduate version also have readings from current literature and 
+            additional assignments.</span></p>
+        
+              <button onclick="readMore()" class="btn plus" id="myBtn" style="  font-family: 'Poppins', sans-serif;
+              "> Read More  </i></button>
+
+        <div class="course-about-buttons">
+            <fieldset class="fieldset5" style="float: right; ">
+                &nbsp;&nbsp;&nbsp; <a href="#"> <i class="fas fa-share-alt fa-lg"></i></a>
+                &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+
+                <div id="pencerekodu"><label for="pencere" class="dugme">
+                  <i class="fas fa-trash-alt fa-lg"></i>
+                  </label style="background-color:"><input type="checkbox" class="Pencereac" id="pencere" name="pencere"></input><label class="pencere">
+                    <h1 style="text-align: center;"> The course will be deleted please be careful!!</h1>
+                    
+                    <label for="pencere" class="dugme" name="ac">Yes</label>&nbsp;<label for="pencere" class="dugme" name="kapat">No</label></label></div>
+                    <style> .dugme{margin-top: 8px; cursor:pointer;display:inline-block;padding:5px 10px;background-color: transparent;font-family:Helvetica, Arial, sans-serif;font-size:14px;color:#444; -webkit-border-radius: 3px; border-radius: 3px; } [name="ac"]{position:absolute;bottom:20px;right:100px;} .pencere{ position:fixed;top:-50%;left:-50%; width:380px;height:280px;background:#fff;box-shadow:0 0 6px 2px rgba(0,0,0,0.4); opacity:0; transition:opacity 0.6s ease-out; z-index:-1; padding:10px; -webkit-border-radius: 3px; border-radius: 3px; margin:-150px 0 0 -200px; } .Pencereac{width:1px;height:1px;visibility:hidden;} .Pencereac:checked + .pencere{ top:50%;left:50%; display:block; z-index:9; opacity:1;}</style>
+
+
+                    <style> .dugme{cursor:pointer;display:inline-block;padding:5px 10px;background-color: transparent;;font-family:Helvetica, Arial, sans-serif;font-size:14px;color:#444; -webkit-border-radius: 3px; border-radius: 3px; } [name="kapat"]{position:absolute;bottom:20px;right:20px;} .pencere{ position:fixed;top:-50%;left:-50%; width:380px;height:280px;background:#fff;box-shadow:0 0 6px 2px rgba(0,0,0,0.4); opacity:0; transition:opacity 0.6s ease-out; z-index:-1; padding:10px; -webkit-border-radius: 3px; border-radius: 3px; margin:-150px 0 0 -200px; } .Pencereac{width:1px;height:1px;visibility:hidden;} .Pencereac:checked + .pencere{ top:50%;left:50%; display:block; z-index:9; opacity:1;}</style>
+               
+
+            </fieldset>
+        </div>
+        
+        
+      </div>
+
+    </div>
+
+  </div>
+ 
+
+
+  <div class="info-accordion-together">
+
+  <div class="row">
+    <div class="column_2" style="width: 40%;" >
+    <fieldset class="fieldset4 abc" >
+        
+        <label for=""><i class="fa fa-fw fa-bookmark"></i><b>&nbsp;Prerequisite:</b>Intermediate knowledge of HTML </label>
+        <label for=""><i class="fa fa-fw fa-check"></i><b>&nbsp;Completion Status:</b> Continue</label>
+        <label for=""><i class="fa fa-fw fa-graduation-cap"></i><b>&nbsp;University:</b> Akdeniz University</label> 
+        <label for=""><i class="fa fa-fw fa-language"></i><b>&nbsp;Language:</b> English</label> 
+    </fieldset>
+    
+    <fieldset class="fieldset4 abc">
+      <div><b><ins>Announcements </ins></b></div>
+      <br>
+      <label for=""><i class="fa fa-fw fa-comment"></i>&nbsp;</b>Chapter 5 will be updating</label>
+      <br>
+      <label for=""><i class="fa fa-fw fa-comment"></i>&nbsp;</b>Chapter 4: Quiz date 12/12/2020 10.00 am</label>  
+      <br>    
+  </fieldset>
+
+    <fieldset class="fieldset4 abc">
+        <div><b><ins>Auxiliary Resources</ins></b></div>
+        <br>
+        <label for=""><b>Text-Book:</b>Human Computer Interaction - Alan Dix</label>
+        <br>
+        <label for=""><b>Suggestion website:</b><a href="https://ocw.mit.edu/search/ocwsearch.htm?q=user%20interface"> https://ocw.mit.edu/search/ocwsearch.htm?q=user%20interface</a></label>      
+    </fieldset>
+   
+</div>
+
+
+
+
+
+
+  <div class="container-accordion">
+    <ul id="accordion" class="accordion">
+        <li>
+            <div class="link"> <i class="fa fa-chevron-down "></i> Chapter 1 : Usability </div>
+            <ul class="submenu">
+                <li><a href="course-content.html"><i class="fas fa-video"></i> Subchapter 1: video Section</a></li>
+                <li><a href="course-content.html"><i class="fas fa-scroll"></i> Subchapter 2: Script Section</a></li>
+                <li><a href="course-content.html"><i class="fas fa-running  fa-lg"></i> Subchapter 3: Exercise Section</a></li>
+                <li><a href="course-content.html"><i class="fas fa-stopwatch"></i> Subchapter 4: Quiz Section</a></li>
+            </ul>
+        </li>
+        <li>
+            <div class="link"><i class="fa fa-chevron-down"></i> Chapter 2 : User Testing </div>
+            <ul class="submenu">
+                <li><a href="course-content.html"><i class="fas fa-video"></i> Subchapter 1: video Section</a></li>
+                <li><a href="course-content.html"><i class="fas fa-scroll"></i> Subchapter 2: Script Section</a></li>
+                <li><a href="course-content.html"><i class="fas fa-running  fa-lg"></i> Subchapter 3: Exercise Section</a></li>
+                <li><a href="course-content.html"><i class="fas fa-stopwatch"></i> Subchapter 4: Quiz Section</a></li>
+            </ul>
+        </li>
+        <li>
+            <div class="link"> <i class="fa fa-chevron-down "></i> Chapter 3 : Graphical Design </div>
+            <ul class="submenu">
+                <li><a href="course-content.html"><i class="fas fa-video"></i> Subchapter 1: Video Section</a></li>
+                <li><a href="course-content.html"><i class="fas fa-scroll"></i> Subchapter 2: Script Section</a></li>
+                <li><a href="course-content.html"><i class="fas fa-running  fa-lg"></i> Subchapter 3: Exercise Section</a></li>
+                <li><a href="course-content.html"><i class="fas fa-stopwatch"></i> Subchapter 4: Quiz Section</a></li>
+            </ul>
+        </li>
+        <li>
+            <div class="link"><i class="fa fa-chevron-down"></i> Chapter 4 : Heuristic Evaluation  </div>
+            <ul class="submenu">
+                <li><a href="course-content.html"><i class="fas fa-video"></i> Subchapter 1: video Section</a></li>
+                <li><a href="course-content.html"><i class="fas fa-scroll"></i> Subchapter 2: Script Section</a></li>
+                <li><a href="course-content.html"><i class="fas fa-running  fa-lg"></i> Subchapter 3: Exercise Section</a></li>
+                <li><a href="course-content.html"><i class="fas fa-stopwatch"></i> Subchapter 4: Quiz Section</a></li>
+            </ul>
+        </li>
+        <li>
+            <div class="link"><i class="fa fa-chevron-down"></i> Chapter 5 : Prototyping </div>
+            <ul class="submenu">
+                <li><a href="course-content.html"><i class="fas fa-video"></i> Subchapter 1: video Section</a></li>
+                <li><a href="course-content.html"><i class="fas fa-scroll"></i> Subchapter 2: Script Section</a></li>
+                <li><a href="course-content.html"><i class="fas fa-running  fa-lg"></i> Subchapter 3: Exercise Section</a></li>
+                <li><a href="course-content.html"><i class="fas fa-stopwatch"></i> Subchapter 4: Quiz Section</a></li>
+            </ul>
+        </li>
+        <li>
+            <div class="link"><i class="fa fa-chevron-down"></i> Chapter 6 : Information visualization </div>
+            <ul class="submenu">
+                <li><a href="course-content.html"><i class="fas fa-video"></i> Subchapter 1: video Section</a></li>
+                <li><a href="course-content.html"><i class="fas fa-scroll"></i> Subchapter 2: Script Section</a></li>
+                <li><a href="course-content.html"><i class="fas fa-running  fa-lg"></i> Subchapter 3: Exercise Section</a></li>
+                <li><a href="course-content.html"><i class="fas fa-stopwatch"></i> Subchapter 4: Quiz Section</a></li>
+            </ul>
+        </li>
+
+        <li>
+            <div class="link"><i class="fa fa-chevron-down"></i> Chapter 7 : Heuristic Evaluation </div>
+            <ul class="submenu">
+                <li><a href="#"><i class="fas fa-video"></i> Subchapter 1: video Section</a></li>
+                <li><a href="#"><i class="fas fa-scroll"></i> Subchapter 2: Script Section</a></li>
+                <li><a href="#"><i class="fas fa-running  fa-lg"></i> Subchapter 3: Exercise Section</a></li>
+                <li><a href="#"><i class="fas fa-stopwatch"></i> Subchapter 4: Quiz Section</a></li>
+            </ul>
+        </li>
+
+
+        
+
+        
+    </ul>
+</div>
+
+  </div>
+
+
+<script>
+
+    $(function() {
+    var Accordion = function(el, multiple) {
+    this.el = el || {};
+    this.multiple = multiple || false;
+    
+    var links = this.el.find('.link');
+    
+    links.on('click', {el: this.el, multiple: this.multiple}, this.dropdown)
+    }
+    
+    Accordion.prototype.dropdown = function(e) {
+    var $el = e.data.el;
+    $this = $(this),
+    $next = $this.next();
+    
+    $next.slideToggle();
+    $this.parent().toggleClass('open');
+    
+    if (!e.data.multiple) {
+    $el.find('.submenu').not($next).slideUp().parent().removeClass('open');
+    };
+    }
+    
+    var accordion = new Accordion($('#accordion'), false);
+    });
+        </script>
+
+
+
+
+
+
+
+
+
+<!--NAVBAR-->
+
+
+
+<script>
+    const menuBtn = document.querySelector(".menu-icon span");
+    const searchBtn = document.querySelector(".search-icon");
+    const cancelBtn = document.querySelector(".cancel-icon");
+    const items = document.querySelector(".nav-items");
+    const form = document.querySelector("form");
+    menuBtn.onclick = ()=>{
+      items.classList.add("active");
+      menuBtn.classList.add("hide");
+      searchBtn.classList.add("hide");
+      cancelBtn.classList.add("show");
+    }
+    cancelBtn.onclick = ()=>{
+      items.classList.remove("active");
+      menuBtn.classList.remove("hide");
+      searchBtn.classList.remove("hide");
+      cancelBtn.classList.remove("show");
+      form.classList.remove("active");
+      cancelBtn.style.color = "#ff3d00";
+    }
+    searchBtn.onclick = ()=>{
+      form.classList.add("active");
+      searchBtn.classList.add("hide");
+      cancelBtn.classList.add("show");
+    }
+  </script>
+  
+  
+  
+  
+  <!--NAVBAR-->
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- READ MORE -->
+
+<script>
+function readMore() {
+  var dots = document.getElementById("dots");
+  var moreText = document.getElementById("more");
+  var btnText = document.getElementById("myBtn");
+
+  if (dots.style.display === "none") {
+    dots.style.display = "inline";
+    btnText.innerHTML = "Read More"; 
+    moreText.style.display = "none";
+  } else {
+    dots.style.display = "none";
+    btnText.innerHTML = "Read Less"; 
+    moreText.style.display = "inline";
+  }
+}
+</script>
+
+
+
+
+
+
+
+
+
+</body>
+</html>

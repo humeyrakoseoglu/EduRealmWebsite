@@ -1,0 +1,1513 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Chapter</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <script src="https://kit.fontawesome.com/a81368914c.js"></script>
+  
+    <link rel="stylesheet" href="../css/create-substyle.css">
+
+   
+    <style>
+
+
+*{
+  font-family: 'Poppins', sans-serif;
+  margin: 0px;
+padding: 0px;
+box-sizing: border-box;
+}
+
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  outline: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+/*Title Default*/
+
+.body{
+  font-family: 'Poppins', sans-serif;
+    overflow: hidden;
+}
+
+/*Treeview ***********************************************/
+.treeview input[type=checkbox]{
+  display:none
+}
+
+
+.treeview,
+.treeview ul{
+    height: 10%;
+    width: 90%;
+	padding: 0;
+	margin: 0;
+	overflow: hidden;
+}
+
+.treeview li{
+	padding-left: 10px;
+	position: relative;
+	font-size: 1rem;
+    margin-top: 4px;
+    display: flex;
+    flex-direction: column
+}
+.treeview > li{
+	padding-left: 0;
+}
+
+.treeview ul{
+	max-height: 0;
+	-webkit-transition: .4s ease;
+	-moz-transition: .4s ease;
+	-ms-transition: .4s ease;
+	-o-transition: .4s ease;
+}
+
+.treeview li input:nth-of-type(1):checked ~ ul{
+	max-height: 1000px;
+}
+
+.treeview li label{
+  padding: 16px;
+  padding-left: 50px;
+  background-color: #ffffff;
+  cursor: pointer;
+  border-radius: 10px;
+  height: 100%;
+  width: 100%;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+}
+.treeview li label i{
+  font-size: 14px
+}
+.treeview li label > span{
+  margin: 0 20px
+}
+.treeview li label input[type=text]{
+  flex: 1;
+  color: #000000;
+  background: white;
+  border: none;
+  border-radius: 3px;
+  transition: .2s ease;
+  padding: 10px;
+  margin-left: 10px;
+  background: none;
+  height: 10%;
+width: 90%;
+}
+.treeview li label input[type=text]:focus,
+.treeview li label input[type=text]:hover{
+  background: rgb(234, 255, 245);
+}
+
+.treeview li label:not(.child):before{
+  transition: .3s ease;
+  position: absolute;
+  margin-left: -16px;
+}
+.treeview li label:not(.child):before{
+  font: normal normal normal 14px/1 FontAwesome;
+	content: "\f054";
+}
+
+.treeview li input[type=checkbox]:checked + label:before{
+color: rgb(11, 109, 34);
+  transform: rotate(90deg);
+}
+.treeview li label{
+    background-color: rgb(197, 235, 212);
+}
+
+
+
+.treeview .action-list{
+  margin-left: auto
+}
+.treeview .action-list i{
+  margin-left: 15px;
+  height: 10px;
+
+}
+
+
+.chapter-list{
+    position: relative;
+    display: flex;
+    width: 80%;
+    height: 80%;
+    justify-content: center;
+    left: 10%;
+    margin: 0%;
+    margin-bottom: 0%;
+    padding-bottom: 0% ;
+
+}
+
+#more {display: none;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/**INFO*/
+.info-course-containter{
+  background-color: rgb(205, 236, 212);
+
+  border-radius: 30px;
+
+  display: flex;
+  justify-content: column;
+  align-items: center;
+  padding: 1%;
+  margin: 1%;
+}
+
+
+
+.about-course-container{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  /**background-color: salmon;*/
+  padding: 1%;
+  margin: 1%;
+  width: 50%;
+  border-radius: 10px;
+
+}
+
+
+
+
+
+
+.course-photo{
+  width: 60%;
+  height: 80%;
+  display: flex;
+  flex-wrap: wrap;
+align-self: center;
+box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+
+}
+
+
+@media screen and (max-width: 600px){
+
+  .course-photo{
+    width: 60%;
+
+  }
+
+  .teacher-info{
+    display: none;
+  }
+
+.info-course-containter{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 3%;
+  padding-top: 5%;
+  padding-bottom: 4%;
+
+}
+
+  .about-course-container{
+    display: flex;
+   flex-direction: column;
+   padding: 1%;
+   margin: 1%;
+    width: 90%;}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+:root {
+  --white: #e8e9ed;
+  --gray: #434257;
+  --blue: #18172c;
+  --green: #00d084;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+
+
+label {
+  cursor: pointer;
+}
+
+[type="checkbox"] {
+  position: absolute;
+  left: -9999px;
+}
+
+
+
+
+.switches {
+  max-width: 900px;
+  font-size: 20px;
+  width: 98%;
+  right: 20px;
+  border-radius: 5px;
+  color: rgb(0, 0, 0);
+}
+
+
+
+
+
+
+.switches label {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px;
+}
+
+.switches span:last-child {
+  position: relative;
+  width: 50px;
+  height: 26px;
+  border-radius: 15px;
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.4);
+  background: var(--gray);
+  transition: all 0.3s;
+}
+
+.switches span:last-child::before,
+.switches span:last-child::after {
+  content: "";
+  position: absolute;
+}
+
+.switches span:last-child::before {
+  left: 1px;
+  top: 1px;
+  width: 24px;
+  height: 24px;
+  background: var(--white);
+  border-radius: 50%;
+  z-index: 1;
+  transition: transform 0.3s;
+}
+
+.switches span:last-child::after {
+  top: 50%;
+  right: 8px;
+  width: 12px;
+  height: 12px;
+  transform: translateY(-50%);
+  background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/162656/uncheck-switcher.svg);
+  background-size: 12px 12px;
+}
+
+.switches [type="checkbox"]:checked + label span:last-child {
+  background: var(--green);
+}
+
+.switches [type="checkbox"]:checked + label span:last-child::before {
+  transform: translateX(24px);
+}
+
+.switches [type="checkbox"]:checked + label span:last-child::after {
+  width: 14px;
+  height: 14px;
+  /*right: auto;*/
+  left: 8px;
+  background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/162656/checkmark-switcher.svg);
+  background-size: 14px 14px;
+}
+
+@media screen and (max-width: 600px) {
+  .switches li::before {
+    display: none;
+  }
+}
+
+
+.share-switch{
+  display: flex;
+  justify-content: center;
+  justify-self: top;
+  justify-items: center;
+  text-align: center;
+  background-color: #20c49f;
+  border-radius: 5px;
+  padding: 0%;
+  border-color: #36cba9;
+  /*
+  margin-bottom: 10%;*/
+  margin-left: 5%;
+  width: 20%;
+}
+
+
+  .course-create{
+      background-color:#e8eeef;
+      margin: 1%;
+      width: 80%;
+      height: 90%;
+      border-radius: 10px;
+      padding: 5%;
+      padding-top: 1%;
+      margin-left: 10%;
+  }
+    </style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--NAVBAR-->
+
+
+<style>
+
+
+
+    nav{
+      background: #171c24;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      text-align: center;
+      height: 80px;
+      padding: 0 50px;
+    }
+    nav .logo{
+      color: #fff;
+      font-size: 30px;
+      font-weight: 600;
+      letter-spacing: -1px;
+    }
+    nav .nav-items{
+      display: flex;
+     
+      flex-direction: row;
+      justify-content: center;
+      text-align: center;
+      align-items: center;
+      flex: 1;
+      padding: 0 0 0 40px;
+    }
+    nav .nav-items li{
+      list-style: none;
+      padding: 0 15px;
+    }
+    nav .nav-items li a{
+      color: #fff;
+      font-size: 18px;
+      font-weight: 500;
+      text-decoration: none;
+    }
+    nav .nav-items li a:hover{
+      color: #ff3d00;
+    }
+    nav form{
+      display: flex;
+      height: 40px;
+      padding: 2px;
+      background: #1e232b;
+      min-width: 18%!important;
+      border-radius: 2px;
+      border: 1px solid rgba(155,155,155,0.2);
+    }
+    nav form .search-data{
+      width: 100%;
+      height: 100%;
+      padding: 0 10px;
+      color: #fff;
+      font-size: 18px;
+      border: none;
+      font-weight: 500;
+      background: none;
+    }
+    nav form button{
+      padding: 0 15px;
+      color: #fff;
+      font-size: 17px;
+      background: #ff3d00;
+      border: none;
+      border-radius: 2px;
+      cursor: pointer;
+    }
+    nav form button:hover{
+      background: #e63600;
+    }
+    nav .menu-icon,
+    nav .cancel-icon,
+    nav .search-icon{
+      width: 40px;
+      text-align: center;
+      margin: 0 50px;
+      font-size: 20px;
+      color: #fff;
+      cursor: pointer;
+      display: none;
+    }
+    nav .menu-icon span,
+    nav .cancel-icon,
+    nav .search-icon{
+      display: none;
+    }
+    @media (max-width: 1245px) {
+      nav{
+        padding: 0 50px;
+      }
+    }
+    @media (max-width: 1140px){
+      nav{
+        padding: 0px;
+      }
+      nav .logo{
+        flex: 2;
+        text-align: center;
+      }
+      nav .nav-items{
+        position: fixed;
+        z-index: 99;
+        top: 70px;
+        width: 100%;
+        left: -100%;
+        height: 100%;
+        padding: 10px 50px 0 50px;
+        text-align: center;
+        background: #14181f;
+        display: inline-block;
+        transition: left 0.3s ease;
+      }
+      nav .nav-items.active{
+        left: 0px;
+      }
+      nav .nav-items li{
+        line-height: 40px;
+        margin: 30px 0;
+      }
+      nav .nav-items li a{
+        font-size: 20px;
+      }
+      nav form{
+        position: absolute;
+        top: 80px;
+        right: 50px;
+        opacity: 0;
+        pointer-events: none;
+        transition: top 0.3s ease, opacity 0.1s ease;
+      }
+      nav form.active{
+        top: 95px;
+        opacity: 1;
+        pointer-events: auto;
+      }
+      nav form:before{
+        position: absolute;
+        content: "";
+        top: -13px;
+        right: 0px;
+        width: 0;
+        height: 0;
+        z-index: -1;
+        border: 10px solid transparent;
+        border-bottom-color: #1e232b;
+        margin: -20px 0 0;
+      }
+      nav form:after{
+        position: absolute;
+        content: '';
+        height: 60px;
+        padding: 2px;
+        background: #1e232b;
+        border-radius: 2px;
+        min-width: calc(100% + 20px);
+        z-index: -2;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+      }
+      nav .menu-icon{
+        display: block;
+      }
+      nav .search-icon,
+      nav .menu-icon span{
+        display: block;
+      }
+      nav .menu-icon span.hide,
+      nav .search-icon.hide{
+        display: none;
+      }
+      nav .cancel-icon.show{
+        display: block;
+      }
+    }
+    .content{
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      text-align: center;
+      transform: translate(-50%, -50%);
+    }
+    .content header{
+      font-size: 30px;
+      font-weight: 700;
+    }
+    .content .text{
+      font-size: 30px;
+      font-weight: 700;
+    }
+    .space{
+      margin: 10px 0;
+    }
+    nav .logo.space{
+      color: red;
+      padding: 0 5px 0 0;
+    }
+    @media (max-width: 980px){
+      nav .menu-icon,
+      nav .cancel-icon,
+      nav .search-icon{
+        margin: 0 20px;
+      }
+      nav form{
+        right: 30px;
+      }
+    }
+    @media (max-width: 350px){
+      nav .menu-icon,
+      nav .cancel-icon,
+      nav .search-icon{
+        margin: 0 10px;
+        font-size: 16px;
+      }
+    }
+    .content{
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    .content header{
+      font-size: 30px;
+      font-weight: 700;
+    }
+    .content .text{
+      font-size: 30px;
+      font-weight: 700;
+    }
+    .content .space{
+      margin: 10px 0;
+    }
+    
+    
+    
+    
+    
+        </style>
+    
+    
+    
+    
+    
+    <style>
+        .dropbtn {
+          background-color: #4CAF50;
+          color: white;
+          padding: 2px;
+          font-size: 16px;
+          border: none;
+          cursor: pointer;
+        }
+        
+        .dropdown {
+          position: relative;
+          display: inline-block;
+        }
+        
+        .dropdown-content {
+          display: none;
+          position: absolute;
+          right: 0;
+          background-color: #f9f9f9;
+          min-width: 160px;
+          box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+          z-index: 1;
+        }
+        
+        .dropdown-content a {
+          color: black;
+          padding: 12px 16px;
+          text-decoration: none;
+          display: block;
+        }
+        
+        .dropdown-content a:hover {background-color: #f1f1f1;}
+        
+        .dropdown:hover .dropdown-content {
+          display: block;
+        }
+        
+        .dropdown:hover .dropbtn {
+          background-color: #3e8e41;
+        }
+    
+    
+    
+        .drop-li{
+       display: inline-block;
+       list-style-type: none;
+       position: relative;
+    }
+    
+    .drop-li ul {
+       display: none;
+       position: absolute;
+       width: 200px;
+       left: 0;
+       top: 100%;
+       margin: 0;
+       padding: 30x;
+    }
+    
+    .drop-li:hover > ul {
+       display: block;
+    }
+    
+    .drop-li a {
+       padding: 5px 10px;
+    
+       color: rgb(121, 77, 77);
+       text-align: center;
+       background: #000;
+       display: block;
+    }
+
+    .fieldset5 {
+    display: flex;
+    flex-direction: row;
+}
+
+input {
+    cursor: pointer;
+}
+        </style>
+
+
+
+<!--NAVBAR-->
+
+
+
+</head>
+<body>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+     
+
+      <!-- navbar-->
+      <nav>
+        <div class="menu-icon">
+           <span class="fas fa-bars"></span>
+        </div>
+        <div class="logo" style="display: flex; flex-direction: row; align-items: center;">
+           <img src="../images/global-education.png" style="width: 8%;">&nbsp; EduRealm
+        </div>
+        <div class="search-icon">
+           <span class="fas fa-search"></span>
+        </div>
+        <div class="cancel-icon">
+           <span class="fas fa-times"></span>
+        </div>
+        <form action="#">
+           <input type="search" class="search-data" placeholder="Search"  ><i class="fas fa-search fa-lg" style="align-self: center; color: rgb(214, 214, 214); padding-right: 10px ;"></i>
+        </form>
+        <div class="nav-items">
+           <li><a href="teacher-profile.html"><i class="fas fa-home"></i> Home</a></li>
+           <li><a href="discover.html"><i class="fas fa-shapes"></i> Discover</a></li>
+           <li><a href="help.html"><i class="fas fa-question"></i> Help</a></li>
+           <li>
+              <a href="#">
+           <li><a></a> </li>
+           <li class="drop-li" >
+              <a href="#"><i class="fas fa-user-circle fa-3x"></i></a>
+              <ul>
+                 <li><a href="settings.html" ><i class="fas fa-cog"></i> Settings</a></li>
+                 <li><a href="../index.html"><i class="fas fa-sign-out-alt"></i> Log out</a></li>
+              </ul>
+           </li>
+        </div>
+        </a></li>
+        </div>
+     </nav>
+     <!--navbar-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="course-create">
+
+
+
+
+
+
+
+   
+ 
+ <div class="info-course-containter">
+    
+
+    <div class="about-course-container">
+
+   
+    <img class="course-photo" src="../images/coursee.jpg" >
+        <h1>User Interface</h1>
+      </div>
+
+
+      <div class="add-chapter-button">
+
+        <input  type="submit" value="   Create New Chapter   "  id="myBtn" style="padding: 8%; margin-bottom: 7.5%;"/> 
+
+      </div>
+
+      
+      <div class="share-switch">
+        <div class="switches">
+            <input type="checkbox" id="1">
+            <label for="1">
+              <div style="color: white;">Share: </div>
+
+              <span></span>
+            </label>
+        </div>
+      </div>
+  </div>
+ 
+ 
+
+
+    <h2 style>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Content: </h2>
+    <div class="chapter-list">
+
+
+
+
+        <ul class="treeview checklist">
+            <li>
+              <input type="checkbox" name="tall" id="tall">
+              <label for="tall">
+                <input type="text" value="Chapter 1 : Name">
+                <div class="action-list">
+                  <i class="fa fa-trash"></i>
+                  <a href="#"><i class="fa fa-plus"></i>
+                  </a>
+                </div>
+              </label>
+              
+              <ul>
+                <li>
+                  <input type="checkbox" name="tall-1" id="tall-1">
+                  <label for="tall-1">
+                    <input type="text" value="Subchapter name 1">
+                    <div class="action-list">
+                       
+                      <a href="#"><i class="fa fa-trash" ></i>
+                      <a href="#"><i class="fa fa-plus" ></i>
+                      </a>
+                      <br>
+                     
+                    </div>
+                  </label>
+                  <ul>
+                    <li>
+                      <label>
+                        <input type="text" value="Subsubchapter name 1">
+                      </label>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+          </ul>
+      
+    </div>
+  
+
+
+
+    
+
+
+
+    <div class="chapter-list">
+
+
+
+
+      <ul class="treeview checklist">
+          <li>
+            <input type="checkbox" name="tall" id="tall">
+            <label for="tall">
+              <input type="text" value="Chapter 2 : Name">
+              <div class="action-list">
+                <i class="fa fa-trash"></i>
+                <a href="#"><i class="fa fa-plus"></i>
+                </a>
+              </div>
+            </label>
+            
+            <ul>
+              <li>
+                <input type="checkbox" name="tall-1" id="tall-1">
+                <label for="tall-1">
+                  <input type="text" value="Subchapter name 2">
+                  <div class="action-list">
+                     
+                    <a href="#"><i class="fa fa-trash" ></i>
+                    <a href="#"><i class="fa fa-plus" ></i>
+                    </a>
+                    <br>
+                   
+                  </div>
+                </label>
+                <ul>
+                  <li>
+                    <label>
+                      <input type="text" value="Subsubchapter name 2">
+                    </label>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+    
+  </div>
+
+
+
+
+  <div class="chapter-list">
+
+
+
+
+    <ul class="treeview checklist">
+        <li>
+          <input type="checkbox" name="tall" id="tall">
+          <label for="tall">
+            <input type="text" value="Chapter 3 : Name">
+            <div class="action-list">
+              <i class="fa fa-trash"></i>
+              <a href="#"><i class="fa fa-plus"></i>
+              </a>
+            </div>
+          </label>
+          
+          <ul>
+            <li>
+              <input type="checkbox" name="tall-1" id="tall-1">
+              <label for="tall-1">
+                <input type="text" value="Subchapter name 2">
+                <div class="action-list">
+                   
+                  <a href="#"><i class="fa fa-trash" ></i>
+                  <a href="#"><i class="fa fa-plus" ></i>
+                  </a>
+                  <br>
+                 
+                </div>
+              </label>
+              <ul>
+                <li>
+                  <label>
+                    <input type="text" value="Subsubchapter name 2">
+                  </label>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+  
+
+
+      
+</div>
+
+
+<fieldset class="fieldset5" style="float: right; ">
+  <form action="course-content.html">
+    <input  type="submit" value="   Save   "/>
+  </form>  
+  
+    &nbsp;&nbsp;&nbsp;
+    <form action="teacher-profile.html">
+      <input  type="submit" value=" Cancel  " />
+    </form>
+    
+</fieldset>
+
+<!--Modal 2-->
+
+
+
+
+
+
+
+
+
+
+
+      
+<form class="box" action="index.html" method="post"></form>
+                  
+    <!-- The Modal -->
+    <div id="myModal" class="modal2">
+        <!-- Modal content -->
+        <div class="modal-content2">
+            <span class="close">&times;</span>
+            <div class="panel-body">
+                <div class="text-center">
+                  <h1>Create Subchapter</h1>
+                  <p>Add subchapter what you want</p>
+                  
+                    <div class="panel-body">
+                      <div class="form-style-5">
+                          <form>
+                            <fieldset class="fieldset1">
+                              <label for="job">Subchapter Title:</label><input type="text" name="field1" placeholder="Subchapter Name *">
+                               </fieldset>
+                  
+                               <fieldset class="fieldset1">
+                                <label for="job">Type of Subchapter: <div class="radio-toolbar">
+                                  <input type="radio" id="radioApple" name="radioFruit" value="apple" checked>
+                                 
+                                  <label for="radioApple"> 
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-camera-video-fill" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd" d="M0 5a2 2 0 0 1 2-2h7.5a2 2 0 0 1 1.983 1.738l3.11-1.382A1 1 0 0 1 16 4.269v7.462a1 1 0 0 1-1.406.913l-3.111-1.382A2 2 0 0 1 9.5 13H2a2 2 0 0 1-2-2V5z"/>
+                                  </svg> Video Section</label>
+                                 
+                                  <input type="radio" id="radioBanana" name="radioFruit" value="banana">
+                                  <label for="radioBanana">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-file-earmark-text-fill" viewBox="0 0 16 16">
+                                    <path d="M9.293 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V4.707A1 1 0 0 0 13.707 4L10 .293A1 1 0 0 0 9.293 0zM9.5 3.5v-2l3 3h-2a1 1 0 0 1-1-1zM4.5 9a.5.5 0 0 1 0-1h7a.5.5 0 0 1 0 1h-7zM4 10.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zm.5 2.5a.5.5 0 0 1 0-1h4a.5.5 0 0 1 0 1h-4z"/>
+                                  </svg> Document Section</label>
+                              
+                                  <input type="radio" id="radioOrange" name="radioFruit" value="orange">
+                                  <label for="radioOrange">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil-square" viewBox="0 0 16 16">
+                                    <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456l-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"/>
+                                    <path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z"/>
+                                  </svg> Exercise Section</label> 
+
+
+
+                                  <input type="radio" id="radioBerry" name="radioFruit" value="berry">
+                                  <label for="radioBerry">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil-square" viewBox="0 0 16 16">
+                                    <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456l-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"/>
+                                    <path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z"/>
+                                  </svg> Quiz Section</label> 
+
+                                  
+                              </div></label>
+                                </fieldset>
+                  
+                  
+                          <label for="job">Explanation:</label>
+                          <textarea name="field5" placeholder="Explanation text" rows="12" cols="50"></textarea>
+                  
+                          <label for="job">Content:</label>
+                          <fieldset class="fieldset3">
+                          <div class="row">
+                          <div class="column">
+                        <!--
+                              <br>
+                              <div  class="upload-btn-wrapper" >
+                                <button  class="btn">Upload a file</button>
+                                <input type="file" name="myfile" />
+                              </div>
+
+-->
+                          
+
+              
+
+
+
+                              <div class="drop-zone">
+                                <span class="drop-zone__prompt">Drop or Click here for Upload</span>
+                                <input type="file" name="myFile" class="drop-zone__input">
+                              </div>
+                          
+                              </div>
+                              <!--
+                              <div class="column">
+                                <iframe name="iframe1" width="350" height="210" style="max-width: 100%; " src="https://www.youtube.com/embed/hHJten0OoAg" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                              </div>
+
+-->
+
+                          </fieldset>
+                          
+                  
+                    
+                         
+                  
+                       <fieldset class="fieldset5" style="float: right;">
+                          <input  type="submit" value="Cancel"/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input  type="submit" value="Save" /> 
+                      </fieldset>
+                           
+                  
+                          </form>
+                      
+                          </div>
+                  
+                    </div>
+                </div>
+            </div>
+            </div>
+         </div>
+    </form> 
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+    <script>
+      // Get the modal
+      var modal = document.getElementById("myModal3");
+      
+      // Get the button that opens the modal
+      var btn = document.getElementById("myBtn3");
+      
+      // Get the <span> element that closes the modal
+      var span = document.getElementsByClassName("close3")[0];
+      
+      // When the user clicks the button, open the modal 
+      btn.onclick = function() {
+        modal.style.display = "block";
+      }
+      
+      // When the user clicks on <span> (x), close the modal
+      span.onclick = function() {
+        modal.style.display = "none";
+      }
+      
+      // When the user clicks anywhere outside of the modal, close it
+      window.onclick = function(event) {
+        if (event.target == modal) {
+          modal.style.display = "none";
+        }
+      }
+      
+      </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--create subchapter modal-->
+          <script>
+            // Get the modal
+            var modal = document.getElementById("myModal");
+            
+            // Get the button that opens the modal
+            var btn = document.getElementById("myBtn");
+            
+            // Get the <span> element that closes the modal
+            var span = document.getElementsByClassName("close")[0];
+            
+            // When the user clicks the button, open the modal 
+            btn.onclick = function() {
+              modal.style.display = "block";
+            }
+            
+            // When the user clicks on <span> (x), close the modal
+            span.onclick = function() {
+              modal.style.display = "none";
+            }
+            
+            // When the user clicks anywhere outside of the modal, close it
+            window.onclick = function(event) {
+              if (event.target == modal) {
+                modal.style.display = "none";
+              }
+            }
+            
+            </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--sanirim surukle birakin-->
+
+
+<script>
+
+
+document.querySelectorAll(".drop-zone__input").forEach((inputElement) => {
+  const dropZoneElement = inputElement.closest(".drop-zone");
+
+  dropZoneElement.addEventListener("click", (e) => {
+    inputElement.click();
+  });
+
+  inputElement.addEventListener("change", (e) => {
+    if (inputElement.files.length) {
+      updateThumbnail(dropZoneElement, inputElement.files[0]);
+    }
+  });
+
+  dropZoneElement.addEventListener("dragover", (e) => {
+    e.preventDefault();
+    dropZoneElement.classList.add("drop-zone--over");
+  });
+
+  ["dragleave", "dragend"].forEach((type) => {
+    dropZoneElement.addEventListener(type, (e) => {
+      dropZoneElement.classList.remove("drop-zone--over");
+    });
+  });
+
+  dropZoneElement.addEventListener("drop", (e) => {
+    e.preventDefault();
+
+    if (e.dataTransfer.files.length) {
+      inputElement.files = e.dataTransfer.files;
+      updateThumbnail(dropZoneElement, e.dataTransfer.files[0]);
+    }
+
+    dropZoneElement.classList.remove("drop-zone--over");
+  });
+});
+
+/**
+ * Updates the thumbnail on a drop zone element.
+ *
+ * @param {HTMLElement} dropZoneElement
+ * @param {File} file
+ */
+function updateThumbnail(dropZoneElement, file) {
+  let thumbnailElement = dropZoneElement.querySelector(".drop-zone__thumb");
+
+  // First time - remove the prompt
+  if (dropZoneElement.querySelector(".drop-zone__prompt")) {
+    dropZoneElement.querySelector(".drop-zone__prompt").remove();
+  }
+
+  // First time - there is no thumbnail element, so lets create it
+  if (!thumbnailElement) {
+    thumbnailElement = document.createElement("div");
+    thumbnailElement.classList.add("drop-zone__thumb");
+    dropZoneElement.appendChild(thumbnailElement);
+  }
+
+  thumbnailElement.dataset.label = file.name;
+
+  // Show thumbnail for image files
+  if (file.type.startsWith("image/")) {
+    const reader = new FileReader();
+
+    reader.readAsDataURL(file);
+    reader.onload = () => {
+      thumbnailElement.style.backgroundImage = `url('${reader.result}')`;
+    };
+  } else {
+    thumbnailElement.style.backgroundImage = null;
+  }
+}
+
+</script>
+
+    
+
+
+
+
+
+
+
+
+
+<!--NAVBAR-->
+
+
+
+<script>
+    const menuBtn = document.querySelector(".menu-icon span");
+    const searchBtn = document.querySelector(".search-icon");
+    const cancelBtn = document.querySelector(".cancel-icon");
+    const items = document.querySelector(".nav-items");
+    const form = document.querySelector("form");
+    menuBtn.onclick = ()=>{
+      items.classList.add("active");
+      menuBtn.classList.add("hide");
+      searchBtn.classList.add("hide");
+      cancelBtn.classList.add("show");
+    }
+    cancelBtn.onclick = ()=>{
+      items.classList.remove("active");
+      menuBtn.classList.remove("hide");
+      searchBtn.classList.remove("hide");
+      cancelBtn.classList.remove("show");
+      form.classList.remove("active");
+      cancelBtn.style.color = "#ff3d00";
+    }
+    searchBtn.onclick = ()=>{
+      form.classList.add("active");
+      searchBtn.classList.add("hide");
+      cancelBtn.classList.add("show");
+    }
+  </script>
+  
+  
+  
+  
+  <!--NAVBAR-->
+  
+
+
+
+
+
+
+
+</body>
+</html>

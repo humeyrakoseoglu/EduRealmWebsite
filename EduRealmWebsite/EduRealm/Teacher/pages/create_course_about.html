@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Create Course</title>
+      <script src="https://kit.fontawesome.com/a81368914c.js"></script>
+      <link rel="stylesheet" href="../css/create-course-about.css">
+   </head>
+
+
+   <!-- navbar-->
+   <nav>
+      <div class="menu-icon">
+         <span class="fas fa-bars"></span>
+      </div>
+      <div class="logo" style="display: flex; flex-direction: row; align-items: center;">
+         <img src="../images/global-education.png" style="width: 8%;">&nbsp; EduRealm
+      </div>
+      <div class="search-icon">
+         <span class="fas fa-search"></span>
+      </div>
+      <div class="cancel-icon">
+         <span class="fas fa-times"></span>
+      </div>
+      <form action="#">
+         <input type="search" class="search-data" placeholder="Search"  ><i class="fas fa-search fa-lg" style="align-self: center; color: rgb(214, 214, 214); padding-right: 10px ;"></i>
+      </form>
+      <div class="nav-items">
+         <li><a href="teacher-profile.html"><i class="fas fa-home"></i> Home</a></li>
+         <li><a href="discover.html"><i class="fas fa-shapes"></i> Discover</a></li>
+         <li><a href="help.html"><i class="fas fa-question"></i> Help</a></li>
+         <li>
+            <a href="#">
+         <li><a></a> </li>
+         <li class="drop-li" >
+            <a href="#"><i class="fas fa-user-circle fa-3x"></i></a>
+            <ul>
+               <li><a href="settings.html" ><i class="fas fa-cog"></i> Settings</a></li>
+               <li><a href="../index.html"><i class="fas fa-sign-out-alt"></i> Log out</a></li>
+            </ul>
+         </li>
+      </div>
+      </a></li>
+      </div>
+   </nav>
+   <!--navbar-->
+
+
+   <div class="form-style-5">
+      
+         <div class="row">
+            <div class="column">
+               <fieldset class="fieldset1">
+                  <img src="../images/coursee.JPG" alt="user" style="width:350px; height: 180px;"><br><br>
+                  <div class="upload-btn-wrapper">
+                     <button class="btn">Upload a photo</button>
+                     <input type="file" name="myfile" />
+                  </div>
+                  <br>
+               </fieldset>
+            </div>
+            <div class="column">
+               <fieldset class="fieldset2">
+                  <label for="job">Course Name:</label><input  type="text" name="field1" placeholder="Course Name ">
+                  <label for="job">Field of Course:</label> 
+                  <select id="job" name="field4" style="padding: 0%;">
+                     <option value="Computer">Computer Science</option>
+                     <option value="Mathematics">Mathematics</option>
+                     <option value="Physics">Physics</option>
+                     <option value="Cooking">Cooking</option>
+                     <option value="Engineering">Engineering</option>
+                     <option value="Agriculture">Agriculture</option>
+                     <option value="Photography">Photography</option>
+                     <option value="Sport">Sport</option>
+                     <option value="Literature">Literature</option>
+                     <option value="History">History</option>
+                     <option value="Geography">Geography</option>
+                     <option value="other_outdoor">Other</option>
+                  </select>
+               </fieldset>
+            </div>
+         </div>
+         <label for="job">About The Course:</label>
+         <textarea name="field5" placeholder="Explanation text" rows="12" cols="50"></textarea>
+         <div class="row">
+            <div class="column">
+               <fieldset class="fieldset3" style="border: 2px solid rgb(153, 153, 153);" >
+                  <br>
+                  <label for="">&nbsp;&nbsp;<i class="fa fa-fw fa-bookmark"></i>Prerequisite:</label>
+                  <input type="text" name="field3" placeholder="Type conditions"><br><br>
+                  <label for="">&nbsp;&nbsp;<i class="fa fa-fw fa-language" ></i>Language:</label> 
+                  <select id="job" name="field4"  style="padding: 0%;">
+                     <option value="English">English</option>
+                     <option value="Turkish">Turkish</option>
+                     <option value="Chinese">Chinese</option>
+                     <option value="Spanish">Spanish</option>
+                     <option value="Russian">Russian</option>
+                     <option value="Japanese">Japanese</option>
+                     <option value="Italian">Italian</option>
+                     <option value="German">German</option>
+                     <option value="Korean">Korean</option>
+                     <option value="French">French</option>
+                     <option value="Arabic">Arabic</option>
+                     <option value="other">Other</option>
+                  </select>
+               </fieldset>
+            </div>
+            <div class="column">
+               <fieldset class="fieldset4" style="border: 2px solid rgb(153, 153, 153);">
+                  <div>&nbsp;&nbsp;<b><ins>Auxiliary Resources</ins></b></div>
+                  <label for="">&nbsp;&nbsp;<i class="fa fa-fw fa-book"></i>Text-Book:</label>
+                  <input type="text" name="field3" placeholder="Main TextBook:"></label><br><br>
+                  <label for="">&nbsp;&nbsp;<i class="fa fa-fw fa-internet-explorer"></i>Suggestion websites:</label>
+                  <input type="text" multiple name="text" placeholder="Website">
+               </fieldset>
+            </div>
+         </div>
+         <fieldset class="fieldset5" style="float: right; ">
+      <form action="teacher-profile.html">
+      <input  type="submit" value="Save"/>
+      </form> 
+      &nbsp;&nbsp;&nbsp;
+      <form action="course-create-part2.html">
+         <input type="submit" value="Add Content"/> 
+      </form>
+      &nbsp;&nbsp;&nbsp;
+      <form action="teacher-profile.html">
+         <input type="submit" value="Cancel"/> 
+      </form>
+      
+      </fieldset>
+   </div>
+
+   </div>
+   
+   </body>
+</html>
